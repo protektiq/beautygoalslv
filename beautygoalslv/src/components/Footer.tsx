@@ -21,7 +21,7 @@ const quickLinks = [
 ] as const;
 
 const columnHeadingClassName =
-  "mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-teak";
+  "mb-4 text-[clamp(0.65rem,1.5vw,0.7rem)] font-semibold uppercase tracking-[0.1em] text-teak";
 
 const columnLinkClassName =
   "mb-2 block text-[0.82rem] leading-relaxed text-white/45 transition-colors hover:text-teak";
@@ -31,14 +31,14 @@ const columnTextClassName =
 
 const Footer = () => {
   return (
-    <footer className="border-t border-[rgba(185,160,104,0.15)] bg-black px-6 pb-8 pt-[60px]">
+    <footer className="section-padding-x border-t border-[rgba(185,160,104,0.15)] bg-black pb-8 pt-12 md:pt-[60px]">
       <div className="mx-auto max-w-[1200px]">
-        <div className="mb-12 grid grid-cols-1 gap-12 max-[600px]:grid-cols-1 min-[601px]:grid-cols-2 min-[901px]:grid-cols-[2fr_1fr_1fr_1fr] min-[901px]:gap-12">
+        <div className="mb-12 grid grid-cols-1 gap-12 min-[901px]:grid-cols-[2fr_1fr_1fr_1fr] min-[901px]:gap-12">
           <div>
-            <div className="mb-3.5 font-display text-2xl italic text-teak">
+            <div className="mb-3.5 font-display text-[clamp(1.35rem,4vw,1.5rem)] italic text-teak">
               Beauty Goals LV
             </div>
-            <p className="max-w-[260px] text-[0.85rem] leading-relaxed text-white/40">
+            <p className="max-w-none text-[0.85rem] leading-relaxed text-white/40 min-[901px]:max-w-[260px]">
               Las Vegas&apos;s premier medical aesthetics spa. Expert injectables,
               advanced lasers, and personalized care — led by Michelle
               Tio-Nguyen, FNP-C.
@@ -84,7 +84,7 @@ const Footer = () => {
 
           <div>
             <h2 className={columnHeadingClassName}>Visit Us</h2>
-            <address className="not-italic">
+            <address className="not-italic break-words">
               <p className={columnTextClassName}>
                 8961 W. Sahara Ave
                 <br />

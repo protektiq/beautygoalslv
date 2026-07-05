@@ -179,7 +179,7 @@ export default function Home() {
   return (
     <>
     <section className="overflow-x-hidden bg-black">
-      <div className="mx-auto grid min-h-[calc(100vh-72px)] max-w-[1200px] grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-[60px]">
+      <div className="mx-auto grid min-h-[calc(100vh-72px)] max-w-[1200px] grid-cols-1 items-center gap-10 px-4 py-12 md:grid-cols-2 md:gap-[60px] md:px-6 md:py-20">
         <div className="text-center md:text-left">
           <SectionEyebrow className="text-teak">
             Las Vegas Premier Med Spa
@@ -196,11 +196,11 @@ export default function Home() {
             Sahara Ave.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            <Button href="/contact" variant="gold">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-center md:justify-start">
+            <Button href="/contact" variant="gold" className="w-full text-center sm:w-auto">
               Book a Consultation
             </Button>
-            <Button href="/services" variant="outline-white">
+            <Button href="/services" variant="outline-white" className="w-full text-center sm:w-auto">
               Explore Services
             </Button>
           </div>
@@ -212,13 +212,13 @@ export default function Home() {
         </div>
 
         <aside
-          className="rounded border border-teak/15 bg-teak/[0.05] px-10 py-12"
+          className="rounded border border-teak/15 bg-teak/[0.05] px-6 py-8 md:px-10 md:py-12"
           aria-label="Practice highlights"
         >
-          <dl className="mb-10 grid grid-cols-2 gap-8">
+          <dl className="mb-10 grid grid-cols-2 gap-4 md:gap-8">
             {HERO_STATS.map((stat) => (
               <div key={stat.label}>
-                <dt className="font-display text-[2.8rem] leading-none text-teak">
+                <dt className="font-display text-[clamp(1.75rem,8vw,2.8rem)] leading-none text-teak">
                   {stat.value}
                 </dt>
                 <dd className="mt-1 font-body text-[0.75rem] tracking-[0.04em] text-white/50">
@@ -248,12 +248,12 @@ export default function Home() {
     </section>
 
     <section
-      className="border-y border-teak/15 bg-near-black px-6 py-5"
+      className="section-padding-x border-y border-teak/15 bg-near-black py-5"
       aria-label="Social proof"
     >
       <ul className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-6 md:justify-between md:gap-4">
         {SOCIAL_PROOF.map((item) => (
-          <li key={item.label} className="min-w-[120px] flex-1 text-center">
+          <li key={item.label} className="min-w-0 flex-1 basis-[45%] text-center sm:basis-auto sm:min-w-[120px]">
             <p className="font-display text-[1.4rem] font-normal leading-none text-teak">
               {item.value}
             </p>
@@ -265,11 +265,11 @@ export default function Home() {
       </ul>
     </section>
 
-    <section className="bg-warm-white px-6 py-24">
+    <section className="section-padding bg-warm-white">
       <div className="mx-auto max-w-[1200px]">
         <SectionEyebrow>Our Treatments</SectionEyebrow>
 
-        <h2 className="mb-3 font-display text-body">
+        <h2 className="mb-3 h2-section text-body">
           Everything your skin needs, under one roof.
         </h2>
 
@@ -278,7 +278,7 @@ export default function Home() {
           treatment is tailored to your goals by our licensed team.
         </p>
 
-        <ul className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-px border border-teak/10 bg-teak/10">
+        <ul className="grid grid-cols-1 gap-px border border-teak/10 bg-teak/10 min-[601px]:grid-cols-[repeat(auto-fill,minmax(260px,1fr))]">
           {SERVICES.map((service) => (
             <li key={service.title}>
               <article className="group flex h-full flex-col bg-white p-8 transition-colors duration-200 hover:bg-warm-white">
@@ -313,7 +313,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-white px-6 py-24">
+    <section className="section-padding bg-white">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
         <div
           className="mx-auto flex aspect-[3/4] max-h-[520px] w-full max-w-md flex-col items-center justify-center rounded border border-teak/20 bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] text-center md:mx-0 md:max-w-none"
@@ -330,7 +330,7 @@ export default function Home() {
         <div>
           <SectionEyebrow>Meet Michelle</SectionEyebrow>
 
-          <h2 className="mb-5 font-display text-body">
+          <h2 className="mb-5 h2-section text-body">
             Master injector. Skin expert. Your partner.
           </h2>
 
@@ -355,11 +355,11 @@ export default function Home() {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/about" variant="gold">
+          <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <Button href="/about" variant="gold" className="w-full text-center sm:w-auto">
               Meet the full team
             </Button>
-            <Button href="/contact" variant="outline">
+            <Button href="/contact" variant="outline" className="w-full text-center sm:w-auto">
               Book with Michelle
             </Button>
           </div>
@@ -367,11 +367,11 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-warm-white px-6 py-24">
+    <section className="section-padding bg-warm-white">
       <div className="mx-auto max-w-[1200px]">
         <SectionEyebrow>Real Results</SectionEyebrow>
 
-        <h2 className="mb-3 font-display text-body">
+        <h2 className="mb-3 h2-section text-body">
           Results that speak for themselves.
         </h2>
 
@@ -422,11 +422,11 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-black px-6 py-24">
+    <section className="section-padding bg-black">
       <div className="mx-auto max-w-[1200px]">
         <SectionEyebrow className="text-teak">Client Reviews</SectionEyebrow>
 
-        <h2 className="mb-12 font-display text-white">
+        <h2 className="mb-12 h2-section text-white">
           What our clients say.
         </h2>
 
@@ -470,12 +470,12 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-warm-white px-6 py-24">
+    <section className="section-padding bg-warm-white">
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
           <div>
             <SectionEyebrow>@beautygoalslv</SectionEyebrow>
-            <h2 className="font-display text-body">@beautygoalslv</h2>
+            <h2 className="h2-section text-body">@beautygoalslv</h2>
           </div>
           <a
             href="https://instagram.com/beautygoalslv"
@@ -505,12 +505,12 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="bg-black px-6 py-24">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-20 md:grid-cols-2">
+    <section className="section-padding bg-black">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-12 md:grid-cols-2 md:gap-20">
         <div>
           <SectionEyebrow className="text-teak">Contact Us</SectionEyebrow>
 
-          <h2 className="mb-5 font-display text-white">
+          <h2 className="mb-5 h2-section text-white">
             Let&apos;s start your glow-up.
           </h2>
 

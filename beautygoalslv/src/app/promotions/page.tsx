@@ -101,10 +101,10 @@ const PromotionsPage = () => {
         subtext="Limited-time offers on treatments and memberships."
       />
 
-      <section className="bg-warm-white px-6 py-24">
+      <section className="section-padding bg-warm-white">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="sr-only">Current promotions</h2>
-          <ul className="mb-[60px] grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
+          <ul className="mb-10 grid grid-cols-1 gap-6 min-[601px]:mb-[60px] min-[601px]:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
             {PROMOTIONS.map((promo) => (
               <li key={promo.id}>
                 <PromoCard {...promo} />
@@ -112,8 +112,8 @@ const PromotionsPage = () => {
             ))}
           </ul>
 
-          <div className="rounded-[4px] border border-teak/15 bg-black px-6 py-12 text-center">
-            <h2 className="mb-3 font-display text-[1.5rem] italic text-white">
+          <div className="rounded-[4px] border border-teak/15 bg-black px-4 py-10 text-center md:px-6 md:py-12">
+            <h2 className="mb-3 font-display text-[clamp(1.25rem,3.5vw,1.5rem)] italic text-white">
               Year-round savings with a membership
             </h2>
             <p className="mb-6 text-white/45">

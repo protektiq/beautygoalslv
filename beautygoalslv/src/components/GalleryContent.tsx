@@ -135,7 +135,7 @@ const GalleryContent = () => {
   };
 
   return (
-    <section className="bg-warm-white px-6 py-24">
+    <section className="section-padding bg-warm-white">
       <div className="mx-auto max-w-[1200px]">
         <h2 className="sr-only">Filter gallery results</h2>
         <div
@@ -166,7 +166,7 @@ const GalleryContent = () => {
           })}
         </div>
 
-        <ul className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-4">
+        <ul className="grid grid-cols-1 gap-4 min-[601px]:grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(260px,1fr))]">
           {filteredItems.map((item) => (
             <li key={item.id}>
               <GalleryCard treatment={item.treatment} meta={item.meta} />

@@ -168,10 +168,10 @@ const Nav = () => {
         aria-label="Main navigation"
         className="flex h-[72px] items-center border-b border-[rgba(185,160,104,0.2)] bg-black"
       >
-        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6">
+        <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 md:px-6">
           <Link
             href="/"
-            className="font-display text-[1.45rem] italic tracking-[0.01em] text-teak"
+            className="font-display text-[clamp(1.2rem,4vw,1.45rem)] italic tracking-[0.01em] text-teak"
             onClick={handleCloseMenu}
           >
             Beauty Goals LV
@@ -286,12 +286,12 @@ const Nav = () => {
       </nav>
 
       <div
-        className={`overflow-hidden border-b border-[rgba(185,160,104,0.2)] bg-black transition-[max-height] duration-300 ease-in-out min-[901px]:hidden ${
+        className={`overflow-x-hidden overflow-y-auto border-b border-[rgba(185,160,104,0.2)] bg-black transition-[max-height] duration-300 ease-in-out min-[901px]:hidden ${
           isOpen ? "max-h-[calc(100vh-72px)]" : "max-h-0"
         }`}
         aria-hidden={!isOpen}
       >
-        <div className="p-6">
+        <div className="p-4 md:p-6">
           <div className="flex flex-col">
             <Link
               href="/"

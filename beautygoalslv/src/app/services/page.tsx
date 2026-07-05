@@ -173,13 +173,13 @@ const ServiceCategorySection = ({
   return (
     <section className="mb-[72px]">
       <div className="mb-8 flex flex-wrap items-baseline gap-5 border-b border-teak/20 pb-4">
-        <h2 className="inline-block rounded-[2px] border border-teak px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
+        <h2 className="inline-block rounded-[2px] border border-teak px-2.5 py-1 text-[clamp(0.65rem,1.5vw,0.7rem)] font-semibold uppercase tracking-[0.08em] text-teak">
           {tag}
         </h2>
         <p className="text-[0.85rem] text-muted">{description}</p>
       </div>
 
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-5">
+      <ul className="grid grid-cols-1 gap-5 min-[601px]:grid-cols-[repeat(auto-fill,minmax(280px,1fr))]">
         {services.map((service) => (
           <li key={service.name}>
             <ServiceCard {...service} />
@@ -200,11 +200,11 @@ const ServicesPage = () => {
         subtext="15+ advanced services from injectables to body contouring, delivered by Las Vegas's most experienced aesthetic team."
       />
 
-      <section className="bg-warm-white px-6 py-24">
+      <section className="section-padding bg-warm-white">
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-[60px] flex flex-col items-start justify-between gap-6 rounded-[4px] border border-teak/25 bg-black px-6 py-8 md:flex-row md:items-center md:gap-6 md:px-10">
+          <div className="mb-10 flex flex-col items-start justify-between gap-6 rounded-[4px] border border-teak/25 bg-black px-4 py-6 md:mb-[60px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-8">
             <div>
-              <h2 className="mb-1.5 font-display text-[1.3rem] italic text-white">
+              <h2 className="mb-1.5 font-display text-[clamp(1.1rem,3vw,1.3rem)] italic text-white">
                 Glow Getter Membership
               </h2>
               <p className="text-[0.85rem] text-white/[0.65]">
@@ -222,7 +222,7 @@ const ServicesPage = () => {
               </p>
             </div>
 
-            <Button variant="outline" href="/membership" size="sm">
+            <Button variant="outline" href="/membership" size="sm" className="w-full text-center md:w-auto">
               See all plans
             </Button>
           </div>
@@ -231,8 +231,8 @@ const ServicesPage = () => {
             <ServiceCategorySection key={category.tag} {...category} />
           ))}
 
-          <div className="flex flex-wrap items-center gap-4 rounded-[4px] border border-teak/15 bg-teak/[0.06] p-6">
-            <div className="min-w-[240px] flex-1">
+          <div className="flex flex-wrap items-center gap-4 rounded-[4px] border border-teak/15 bg-teak/[0.06] p-4 md:p-6">
+            <div className="min-w-0 flex-1">
               <p className="font-semibold text-body">
                 Financing available for all treatments
               </p>

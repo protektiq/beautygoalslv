@@ -267,10 +267,10 @@ const MembershipPage = () => {
         subtext="Four membership tiers designed to make consistent, expert skincare achievable at every budget. Credits always roll over — never lose what you pay for."
       />
 
-      <section className="bg-warm-white px-6 py-24">
+      <section className="section-padding bg-warm-white">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="sr-only">Membership tiers</h2>
-          <ul className="mb-[60px] grid grid-cols-1 gap-4 min-[601px]:grid-cols-2 min-[901px]:grid-cols-4">
+          <ul className="mb-10 grid grid-cols-1 gap-6 min-[601px]:mb-[60px] min-[601px]:grid-cols-2 min-[601px]:gap-4 min-[901px]:grid-cols-4">
             {MEMBERSHIP_TIERS.map((tier) => (
               <li key={tier.id}>
                 <TierCard {...tier} />
@@ -278,9 +278,9 @@ const MembershipPage = () => {
             ))}
           </ul>
 
-          <h2 className="mb-6 font-display text-body">Plan comparison</h2>
+          <h2 className="mb-6 h2-section text-body">Plan comparison</h2>
 
-          <div className="overflow-x-auto">
+          <div className="-mx-4 overflow-x-auto px-4 md:mx-0 md:px-0">
             <table className="w-full min-w-[640px] border-collapse text-[0.84rem]">
               <thead>
                 <tr>

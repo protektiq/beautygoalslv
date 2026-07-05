@@ -12,7 +12,7 @@ const PageHero = ({
   subtext,
 }: PageHeroProps) => {
   return (
-    <section className="border-b border-[rgba(185,160,104,0.15)] bg-black px-6 pb-[60px] pt-[72px] text-center">
+    <section className="section-padding-x border-b border-[rgba(185,160,104,0.15)] bg-black pb-12 pt-[72px] text-center md:pb-[60px]">
       <div className="mx-auto max-w-[680px]">
         <nav
           aria-label="Breadcrumb"

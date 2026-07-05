@@ -135,14 +135,14 @@ const AboutPage = () => {
         subtext="Three licensed professionals, one shared goal — helping you look and feel like the best version of yourself."
       />
 
-      <section className="bg-warm-white px-6 py-24">
+      <section className="section-padding bg-warm-white">
         <div className="mx-auto max-w-[1200px]">
           <SectionEyebrow>Our Providers</SectionEyebrow>
-          <h2 className="mb-10 font-display text-body">
+          <h2 className="mb-10 h2-section text-body">
             Expert hands. Genuine care.
           </h2>
 
-          <ul className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-10 min-[601px]:grid-cols-3">
             {TEAM_MEMBERS.map((member) => (
               <li key={member.name}>
                 <TeamCard {...member} />
@@ -152,14 +152,14 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24">
+      <section className="section-padding bg-white">
         <div className="mx-auto max-w-[1200px]">
           <SectionEyebrow>Our Philosophy</SectionEyebrow>
-          <h2 className="font-display text-body">
+          <h2 className="h2-section text-body">
             Beauty should feel like you — just better.
           </h2>
 
-          <ul className="mt-[60px] grid grid-cols-1 gap-10 md:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-10 min-[601px]:mt-[60px] min-[601px]:grid-cols-3">
             {PHILOSOPHY_ITEMS.map((item) => (
               <li
                 key={item.title}

@@ -74,11 +74,11 @@ const ContactPage = () => {
         subtext="All consultations are complimentary. We respond within 24 hours."
       />
 
-      <section className="bg-warm-white px-6 py-24">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-20 lg:grid-cols-[1fr_480px]">
-          <div className="max-w-[560px]">
+      <section className="section-padding bg-warm-white">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_480px] lg:gap-20">
+          <div className="max-w-[560px] min-w-0">
             <SectionEyebrow>Get in touch</SectionEyebrow>
-            <h2 className="mb-7 font-display text-body">
+            <h2 className="mb-7 h2-section text-body">
               We&apos;d love to meet you.
             </h2>
 
@@ -167,7 +167,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="w-full rounded-[4px] border border-teak/[0.12] bg-white p-9 lg:min-w-[480px]">
+          <div className="w-full min-w-0 rounded-[4px] border border-teak/[0.12] bg-white p-6 md:p-9 lg:min-w-0">
             <h3 className="mb-6 font-display text-[1.25rem] italic text-body">
               Send us a message
             </h3>
