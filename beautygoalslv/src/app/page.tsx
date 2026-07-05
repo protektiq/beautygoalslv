@@ -20,8 +20,17 @@ const TREATMENTS = [
   "Microneedling",
 ] as const;
 
+const SOCIAL_PROOF = [
+  { value: "★ 5.0", label: "Google rating" },
+  { value: "8,000+", label: "Instagram followers" },
+  { value: "13 yrs", label: "Medical expertise" },
+  { value: "CareCredit", label: "Financing available" },
+  { value: "Patientfi", label: "Payment plans" },
+] as const;
+
 export default function Home() {
   return (
+    <>
     <section className="overflow-x-hidden bg-black">
       <div className="mx-auto grid min-h-[calc(100vh-72px)] max-w-[1200px] grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-[60px]">
         <div className="text-center md:text-left">
@@ -90,5 +99,24 @@ export default function Home() {
         </aside>
       </div>
     </section>
+
+    <section
+      className="border-y border-teak/15 bg-near-black px-6 py-5"
+      aria-label="Social proof"
+    >
+      <ul className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-6 md:justify-between md:gap-4">
+        {SOCIAL_PROOF.map((item) => (
+          <li key={item.label} className="min-w-[120px] flex-1 text-center">
+            <p className="font-display text-[1.4rem] font-normal leading-none text-teak">
+              {item.value}
+            </p>
+            <p className="mt-0.5 font-body text-[0.7rem] uppercase tracking-[0.06em] text-white/[0.45]">
+              {item.label}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
+    </>
   );
 }
