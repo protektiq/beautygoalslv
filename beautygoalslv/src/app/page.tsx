@@ -96,6 +96,21 @@ const CREDENTIALS = [
   "Regular attendee — national aesthetics conferences & trainings",
 ] as const;
 
+const BEFORE_AFTER = [
+  {
+    treatment: "Full Face Rejuvenation",
+    detail: "Botox + Filler • 1 session",
+  },
+  {
+    treatment: "Acne Correction",
+    detail: "Aerolase • 3 sessions",
+  },
+  {
+    treatment: "Facial Balancing",
+    detail: "Filler • Cheeks + Chin",
+  },
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -290,6 +305,53 @@ export default function Home() {
               Book with Michelle
             </Button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-warm-white px-6 py-24">
+      <div className="mx-auto max-w-[1200px]">
+        <SectionEyebrow>Real Results</SectionEyebrow>
+
+        <h2 className="mb-3 font-display text-body">
+          Results that speak for themselves.
+        </h2>
+
+        <p className="mb-10 max-w-[640px] text-[1.1rem] leading-relaxed text-muted">
+          Every photo is a real Beauty Goals LV client. No filters, no stock
+          images.
+        </p>
+
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {BEFORE_AFTER.map((item) => (
+            <li key={item.treatment}>
+              <article className="overflow-hidden rounded border border-teak/[0.12] bg-black">
+                <div className="flex min-h-[200px] bg-gradient-to-br from-[#111111] to-[#1f1a14]">
+                  <div className="flex min-h-[200px] flex-1 items-center justify-center px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30">
+                    Before
+                  </div>
+                  <div className="flex min-h-[200px] flex-1 items-center justify-center border-l border-teak/20 px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30">
+                    After
+                  </div>
+                </div>
+
+                <div className="bg-teak/[0.04] px-4 py-3.5">
+                  <p className="text-[0.8rem] font-semibold text-white">
+                    {item.treatment}
+                  </p>
+                  <p className="mt-0.5 text-[0.72rem] text-white/40">
+                    {item.detail}
+                  </p>
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 text-center">
+          <Button href="/gallery" variant="outline">
+            View full gallery →
+          </Button>
         </div>
       </div>
     </section>
