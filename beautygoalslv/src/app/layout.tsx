@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Nav from "@/components/Nav";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -30,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main className="pt-[72px]">{children}</main>
+      </body>
     </html>
   );
 }

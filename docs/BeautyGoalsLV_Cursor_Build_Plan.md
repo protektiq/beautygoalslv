@@ -90,10 +90,10 @@ Also set the default font-sans to Inter.
 
 **Claude Code verification checklist:**
 ```
-- [ ] tailwind.config.ts contains teak, silver, warm-white color keys
-- [ ] fontFamily.display and fontFamily.body are defined
-- [ ] Colors match hex values exactly (#B9A068, #C7C7C7, #F9F6F0)
-- [ ] No Tailwind config syntax errors
+- [x] tailwind.config.ts contains teak, silver, warm-white color keys
+- [x] fontFamily.display and fontFamily.body are defined
+- [x] Colors match hex values exactly (#B9A068, #C7C7C7, #F9F6F0)
+- [x] No Tailwind config syntax errors
 ```
 
 ---
@@ -118,12 +118,12 @@ In /src/app/layout.tsx:
 
 **Claude Code verification checklist:**
 ```
-- [ ] Playfair Display and Inter imported via next/font (not <link> tag)
-- [ ] CSS variables --font-display and --font-body applied to <html>
-- [ ] globals.css sets background #F9F6F0 on body
-- [ ] No layout shift from font loading (display: swap)
-- [ ] Metadata title and description set correctly
-- [ ] npm run build passes without font-related errors
+- [x] Playfair Display and Inter imported via next/font (not <link> tag)
+- [x] CSS variables --font-display and --font-body applied to <html>
+- [x] globals.css sets background #F9F6F0 on body
+- [x] No layout shift from font loading (display: swap)
+- [x] Metadata title and description set correctly
+- [x] npm run build passes without font-related errors
 ```
 
 ---
@@ -154,19 +154,19 @@ Requirements:
 
 **Claude Code verification checklist:**
 ```
-- [ ] Nav.tsx exists in /src/components/
-- [ ] Component is exported as default
-- [ ] Background is #000000 (not near-black, not gray)
-- [ ] Logo uses font-family display (Playfair Display italic)
-- [ ] Logo color is exactly #B9A068
-- [ ] Book Now button has correct gold background and black text
-- [ ] Services dropdown renders with two-column layout
-- [ ] Dropdown shows on hover (CSS or state-based)
-- [ ] All 15+ services are listed in dropdown with correct groupings
-- [ ] Nav uses <Link> not <a> for internal routes
-- [ ] Nav is imported and rendered in layout.tsx
-- [ ] Nav has position: fixed, z-index 50
-- [ ] No TypeScript errors
+- [x] Nav.tsx exists in /src/components/
+- [x] Component is exported as default
+- [x] Background is #000000 (not near-black, not gray)
+- [x] Logo uses font-family display (Playfair Display italic)
+- [x] Logo color is exactly #B9A068
+- [x] Book Now button has correct gold background and black text
+- [x] Services dropdown renders with two-column layout
+- [x] Dropdown shows on hover (CSS or state-based)
+- [x] All 15+ services are listed in dropdown with correct groupings
+- [x] Nav uses <Link> not <a> for internal routes
+- [x] Nav is imported and rendered in layout.tsx
+- [x] Nav has position: fixed, z-index 50
+- [x] No TypeScript errors
 ```
 
 ---
