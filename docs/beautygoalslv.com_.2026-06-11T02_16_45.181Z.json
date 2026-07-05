@@ -1,0 +1,170 @@
+{
+  "links": [
+    {
+      "url": "https://beautygoalslv.com",
+      "title": "Med Spa Las Vegas - Beauty Goals LV",
+      "description": "LV is the best med spa in Las Vegas, your go-to place for Botox, Fillers, facials, medical-grade skincare, and skin rejuvenation. and Skin Rejuvenation Botox & ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/sofwave",
+      "title": "Sofwave Non surgical Face Lift in Las Vegas - Beauty Goals LV",
+      "description": "The Sofwave Non-Surgical Face Lift is an amazing method for reducing wrinkles and fine lines, promoting a more youthful, lifted appearance."
+    },
+    {
+      "url": "https://beautygoalslv.com/gallery",
+      "title": "Gallery - Beauty Goals LV",
+      "description": "Gallery Before and After photos Acne Correction. Full Face Rejuvenation. Facial Balancing Photo 2023"
+    },
+    {
+      "url": "https://beautygoalslv.com/xerf",
+      "title": "XERF - Beauty Goals LV",
+      "description": "XERF is a non-surgical treatment that uses controlled radiofrequency to improve skin tone, tighten tissue, and support overall rejuvenation."
+    },
+    {
+      "url": "https://beautygoalslv.com/membership",
+      "title": "Membership - Beauty Goals LV",
+      "description": "All members receive 10% off Retail + up to 15% Other services and 10% off injectables. Membership $ 99 00 Monthly 702-625-3838 beautygoalsLV@gmail.com"
+    },
+    {
+      "url": "https://beautygoalslv.com/promotions",
+      "title": "Promotions - Beauty Goals LV",
+      "description": "CALL NOW: 702-625-3838. LV@gmail.com 8961 W. Sahara Avenue, Suite 106, Las Vegas, NV 89117. From HydraFacials, Lasers, Microneedling and more,"
+    },
+    {
+      "url": "https://beautygoalslv.com/services",
+      "title": "Services - Beauty Goals LV",
+      "description": "Address: 702-625-3838. Avenue, Suite 106, Las Vegas, NV 89117. From HydraFacials, Lasers, Microneedling and more, she creates an experience tailored to every ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/facial",
+      "title": "Facial Las Vegas - Beauty Goals LV",
+      "description": "Discover flawless beauty with facial in Las Vegas. Popular choices, including HydraFacial, Diamond Glow facials, laser treatments, photofacials, chemical peels ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/botox",
+      "title": "Botox Las Vegas - Beauty Goals LV",
+      "description": "Neurotoxins, also commonly known as botox, are prescription medicines that are injected to temporarily reduce the appearance of fine lines and wrinkles in ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/about-us",
+      "title": "About Beauty Goals Las Vegas - Michelle Tio-Nguyen",
+      "description": "Whether you're looking to refresh your appearance with a non-surgical treatment or seeking to slow down signs of aging, Michelle has the expertise and skill to ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/fillers",
+      "title": "Dermal Fillers Las Vegas​ - Beauty Goals LV",
+      "description": "At Beauty Goals LV, we understand the importance of feeling confident in your skin. Our dermal filler treatments are designed to enhance your natural beauty, ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/contact-us",
+      "title": "Contact Us - Beauty Goals LV",
+      "description": "Let's Connect! Be a Member Now! Be a Member Now! Facebook Twitter Instagram · HOME · ABOUT US · SERVICES · GALLERY · BOOK AN APPOINTMENT. © All rights reserved ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/aerolase-neo-elite",
+      "title": "Aerolase Neo Elite - Beauty Goals LV",
+      "description": "Neo lasers utilize cutting-edge 650-microsecond technology to treat multiple skin conditions. This innovation enhances both clinical efficacy and safety, making ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/other-services",
+      "title": "Other Services - Beauty Goals LV",
+      "description": "It is a hair restoration medical treatment where blood is drawn, processed to obtain the regenerative property, and then injected into the scalp to stimulate ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/emsculpt-neo",
+      "title": "EMSCULPT NEO - Beauty Goals LV",
+      "description": "EMSELLA utilizes electromagnetic energy to deliver thousands of supramaximal pelvic floor muscle contractions in a single session. These contractions re-educate ..."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/thread-lift",
+      "title": "Thread Lift Las Vegas - Beauty Goals LV",
+      "description": "PDO (Polydioxanone) threads are absorbable suture material used to help lift and tighten sagging skin. They also stimulate collagen production."
+    },
+    {
+      "url": "https://beautygoalslv.com/services/lip-filler-las-vegas",
+      "title": "Lip Filler Las Vegas - Beauty Goals LV",
+      "description": "Lip fillers are made of hyaluronic acid (HA) which is a molecule that naturally occurs in our body. HA decreases in amount over time. Most practitioners today ..."
+    }
+  ],
+  "id": "G-t1qBbwpG4LTHENCEDZZ",
+  "startedAt": "2026-06-11T02:16:45.181Z",
+  "endedAt": "2026-06-11T02:16:48.182Z",
+  "endpoint": "map",
+  "formState": {
+    "parseFile": null,
+    "parseFileMeta": null,
+    "extractSetupCompleted": false,
+    "urls": [],
+    "extractSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_mission": {
+          "type": "string"
+        },
+        "supports_sso": {
+          "type": "boolean"
+        },
+        "is_open_source": {
+          "type": "boolean"
+        },
+        "is_in_yc": {
+          "type": "boolean"
+        }
+      }
+    },
+    "extractPrompt": "Extract the company details, following the schema.",
+    "enableWebSearch": false,
+    "constrainUrls": false,
+    "options": {
+      "onlyMainContent": true,
+      "parsePDF": true,
+      "stealthMode": false,
+      "excludeTags": [],
+      "includeTags": [],
+      "waitFor": "",
+      "timeout": "",
+      "maxAge": "2 days",
+      "ignoreSitemap": false,
+      "crawlEntireDomain": false,
+      "sitemap": "include",
+      "limit": "5000",
+      "maxDepth": "",
+      "excludePaths": [],
+      "includePaths": [],
+      "includeSubdomains": false,
+      "search": "",
+      "scrapeContentFromSearchResults": true,
+      "timeBasedSearch": "",
+      "location": "",
+      "prompt": ""
+    },
+    "formats": [
+      "markdown"
+    ],
+    "sources": [
+      "web"
+    ],
+    "categories": [],
+    "jsonSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_name": {
+          "type": "string"
+        },
+        "company_description": {
+          "type": "string"
+        }
+      }
+    },
+    "jsonPrompt": "",
+    "questionPrompt": "",
+    "agent": {},
+    "url": "beautygoalslv.com/",
+    "endpoint": "map"
+  },
+  "status": "success",
+  "version": "q4MEAz_MYjnjhdZSOY2fg",
+  "isPreview": false
+}

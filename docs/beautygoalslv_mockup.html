@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Goals LV — Med Spa Las Vegas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & tokens ─────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teak:#B9A068;
+  --teak-light:#CEB98A;
+  --teak-dark:#9A8455;
+  --black:#000000;
+  --near-black:#0D0D0D;
+  --warm-white:#F9F6F0;
+  --white:#FFFFFF;
+  --silver:#C7C7C7;
+  --silver-dark:#999;
+  --body-text:#2D2B27;
+  --muted:#6B6860;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'Inter',system-ui,sans-serif;
+  --nav-h:72px;
+  --max-w:1200px;
+  --section-pad:96px 24px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--warm-white);color:var(--body-text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--ff-body);border:none;background:none}
+
+/* ── Pages ───────────────────────────────────────────────────── */
+.page{display:none}
+.page.active{display:block}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:var(--nav-h);
+  background:var(--black);
+  border-bottom:1px solid rgba(185,160,104,0.2);
+  display:flex;align-items:center;
+}
+.nav-inner{
+  max-width:var(--max-w);margin:0 auto;padding:0 24px;
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:var(--ff-display);font-style:italic;
+  font-size:1.45rem;color:var(--teak);letter-spacing:0.01em;
+  cursor:pointer;
+}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a,.nav-links button{
+  color:rgba(255,255,255,0.75);font-size:0.82rem;font-weight:500;
+  letter-spacing:0.06em;text-transform:uppercase;
+  padding:8px 12px;border-radius:3px;
+  transition:color .2s;background:none;border:none;
+  cursor:pointer;font-family:var(--ff-body);
+}
+.nav-links a:hover,.nav-links button:hover{color:var(--teak)}
+.nav-cta{
+  background:var(--teak)!important;color:var(--black)!important;
+  padding:9px 20px!important;border-radius:3px;
+  font-weight:600!important;letter-spacing:0.05em!important;
+  transition:background .2s!important;
+}
+.nav-cta:hover{background:var(--teak-light)!important}
+
+/* Services mega dropdown */
+.services-dropdown{position:relative}
+.mega-menu{
+  display:none;position:absolute;top:calc(100% + 1px);left:-160px;
+  background:var(--near-black);border:1px solid rgba(185,160,104,0.2);
+  border-top:2px solid var(--teak);
+  width:600px;padding:28px;border-radius:0 0 4px 4px;
+  grid-template-columns:1fr 1fr;gap:0 24px;
+}
+.services-dropdown:hover .mega-menu{display:grid}
+.mega-col-head{
+  font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--teak);font-weight:600;margin-bottom:12px;padding-bottom:8px;
+  border-bottom:1px solid rgba(185,160,104,0.25);
+}
+.mega-item{
+  display:block;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);
+  color:rgba(255,255,255,0.8)!important;font-size:0.82rem!important;
+  text-transform:none!important;letter-spacing:0.01em!important;
+  transition:color .15s;
+}
+.mega-item:hover{color:var(--teak)!important}
+.mega-item span{display:block;font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:1px}
+
+/* ── Utility ─────────────────────────────────────────────────── */
+.page-wrap{padding-top:var(--nav-h)}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.section{padding:var(--section-pad)}
+.section-dark{background:var(--black);color:var(--white)}
+.section-white{background:var(--white)}
+.section-warm{background:var(--warm-white)}
+
+.eyebrow{
+  font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--teak);font-weight:600;margin-bottom:16px;display:block;
+}
+.eyebrow::after{
+  content:'';display:block;width:32px;height:1.5px;background:var(--teak);
+  margin-top:8px;
+}
+h1,h2,h3,h4{font-family:var(--ff-display);font-weight:500;line-height:1.15}
+h1{font-size:clamp(2.8rem,6vw,4.8rem)}
+h2{font-size:clamp(1.9rem,3.5vw,2.8rem)}
+h3{font-size:1.3rem}
+h4{font-size:1.05rem}
+.lead{font-size:1.1rem;color:var(--muted);line-height:1.75;max-width:640px}
+.lead-white{color:rgba(255,255,255,0.65)}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:14px 32px;font-size:0.82rem;
+  font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
+  border-radius:2px;transition:all .2s;cursor:pointer;border:none;
+  font-family:var(--ff-body);
+}
+.btn-gold{background:var(--teak);color:var(--black)}
+.btn-gold:hover{background:var(--teak-light)}
+.btn-outline{background:transparent;color:var(--teak);border:1px solid var(--teak)}
+.btn-outline:hover{background:var(--teak);color:var(--black)}
+.btn-outline-white{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.4)}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1)}
+.btn-sm{padding:10px 22px;font-size:0.76rem}
+
+/* Tags */
+.tag{
+  display:inline-block;padding:4px 10px;font-size:0.7rem;
+  letter-spacing:0.08em;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--teak);color:var(--teak);border-radius:2px;
+}
+
+/* Divider */
+.divider{height:1px;background:rgba(185,160,104,0.2);margin:0}
+
+/* ── HOMEPAGE ────────────────────────────────────────────────── */
+
+/* Hero */
+.hero{
+  background:var(--black);min-height:calc(100vh - var(--nav-h));
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  padding:80px 24px;gap:60px;max-width:var(--max-w);margin:0 auto;
+}
+.hero-left{}
+.hero-eyebrow{
+  font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--teak);font-weight:600;margin-bottom:24px;display:block;
+}
+.hero h1{
+  color:var(--white);font-style:italic;
+  margin-bottom:28px;
+}
+.hero h1 em{color:var(--teak);font-style:italic}
+.hero-sub{
+  color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.7;
+  margin-bottom:40px;max-width:480px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero-membership{
+  font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:20px;
+}
+.hero-membership strong{color:var(--teak)}
+
+.hero-right{
+  background:rgba(185,160,104,0.05);border:1px solid rgba(185,160,104,0.15);
+  border-radius:4px;padding:48px 40px;
+}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px}
+.stat-num{
+  font-family:var(--ff-display);font-size:2.8rem;color:var(--teak);
+  line-height:1;font-weight:400;
+}
+.stat-label{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:4px;letter-spacing:0.04em}
+.hero-treatments{border-top:1px solid rgba(185,160,104,0.2);padding-top:28px}
+.hero-treatments-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teak);margin-bottom:12px}
+.treatment-pills{display:flex;flex-wrap:wrap;gap:6px}
+.treatment-pill{
+  font-size:0.72rem;padding:5px 11px;border:1px solid rgba(185,160,104,0.3);
+  color:rgba(255,255,255,0.65);border-radius:2px;
+}
+
+/* Social proof bar */
+.proof-bar{
+  background:var(--near-black);border-top:1px solid rgba(185,160,104,0.15);
+  border-bottom:1px solid rgba(185,160,104,0.15);
+  padding:20px 24px;
+}
+.proof-bar-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+}
+.proof-item{text-align:center}
+.proof-num{font-family:var(--ff-display);font-size:1.4rem;color:var(--teak);font-weight:400}
+.proof-desc{font-size:0.7rem;color:rgba(255,255,255,0.45);letter-spacing:0.06em;text-transform:uppercase;margin-top:2px}
+
+/* Services grid */
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;
+  background:rgba(185,160,104,0.1);border:1px solid rgba(185,160,104,0.1);
+}
+.service-card{
+  background:var(--white);padding:32px;
+  transition:background .2s;cursor:pointer;
+}
+.service-card:hover{background:var(--warm-white)}
+.service-icon{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(185,160,104,0.12);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;font-size:1.2rem;
+}
+.service-card h4{margin-bottom:6px;font-family:var(--ff-display);font-weight:500}
+.service-card p{font-size:0.85rem;color:var(--muted);line-height:1.5;margin-bottom:14px}
+.service-price{
+  font-size:0.78rem;font-weight:600;color:var(--teak);
+  letter-spacing:0.04em;
+}
+.service-link{
+  font-size:0.75rem;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;transition:color .2s;display:inline-block;margin-top:8px;
+}
+.service-card:hover .service-link{color:var(--teak)}
+
+/* About strip */
+.about-strip{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.about-img-placeholder{
+  background:linear-gradient(135deg,#1a1a1a 0%,#2a2520 100%);
+  border-radius:4px;aspect-ratio:3/4;max-height:520px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border:1px solid rgba(185,160,104,0.2);position:relative;overflow:hidden;
+}
+.about-img-placeholder::before{
+  content:'Michelle Tio-Nguyen\A FNP-C';white-space:pre;
+  font-family:var(--ff-display);font-style:italic;font-size:1.1rem;
+  color:rgba(185,160,104,0.5);text-align:center;
+}
+.credential-list{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+.credential{
+  display:flex;align-items:flex-start;gap:12px;font-size:0.87rem;color:var(--muted);
+}
+.credential::before{
+  content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;
+  background:var(--teak);margin-top:7px;
+}
+
+/* Before/after preview */
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ba-card{
+  background:var(--black);border-radius:4px;overflow:hidden;
+  border:1px solid rgba(185,160,104,0.12);position:relative;
+}
+.ba-placeholder{
+  aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#111 0%,#1f1a14 100%);
+}
+.ba-label-pair{display:flex}
+.ba-half{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);padding:60px 8px;text-align:center;
+}
+.ba-half+.ba-half{border-left:1px solid rgba(185,160,104,0.2)}
+.ba-info{padding:14px 16px;background:rgba(185,160,104,0.04)}
+.ba-treatment{font-size:0.8rem;font-weight:600;color:var(--white)}
+.ba-area{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:2px}
+
+/* Instagram strip */
+.ig-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
+.ig-tile{
+  aspect-ratio:1;background:linear-gradient(135deg,#1a1a1a,#252015);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:opacity .2s;overflow:hidden;
+  border:1px solid rgba(185,160,104,0.08);
+}
+.ig-tile:hover{opacity:.8}
+.ig-tile-label{font-size:0.65rem;color:rgba(185,160,104,0.4);text-align:center;padding:8px}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info{padding-top:8px}
+.contact-detail{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 0;border-bottom:1px solid rgba(185,160,104,0.15);
+  font-size:0.9rem;
+}
+.contact-icon{font-size:1.2rem;margin-top:1px;flex-shrink:0}
+.contact-label{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--teak);margin-bottom:3px;font-weight:600}
+.response-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(185,160,104,0.1);border:1px solid rgba(185,160,104,0.2);
+  color:var(--teak);font-size:0.78rem;padding:8px 14px;border-radius:2px;margin-top:16px;
+}
+.form-field{margin-bottom:20px}
+.form-field label{
+  display:block;font-size:0.73rem;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--muted);font-weight:600;margin-bottom:7px;
+}
+.form-field input,.form-field select,.form-field textarea{
+  width:100%;padding:12px 16px;
+  background:var(--white);border:1px solid rgba(185,160,104,0.2);
+  border-radius:2px;font-family:var(--ff-body);font-size:0.9rem;color:var(--body-text);
+  transition:border-color .2s;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--teak);
+}
+.form-field textarea{height:110px;resize:vertical}
+.form-sub{font-size:0.78rem;color:var(--muted);margin-top:10px;display:flex;align-items:center;gap:6px}
+
+/* ── ABOUT PAGE ──────────────────────────────────────────────── */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.team-card{background:var(--white);border:1px solid rgba(185,160,104,0.12);border-radius:4px;overflow:hidden}
+.team-img{
+  aspect-ratio:3/4;max-height:320px;
+  background:linear-gradient(160deg,#0d0d0d 0%,#1f1a14 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-display);font-style:italic;font-size:1.1rem;
+  color:rgba(185,160,104,0.4);text-align:center;padding:20px;
+}
+.team-body{padding:24px}
+.team-name{font-family:var(--ff-display);font-size:1.2rem;font-weight:500;margin-bottom:4px}
+.team-title{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--teak);margin-bottom:14px;font-weight:600}
+.team-bio{font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:16px}
+.team-certs{display:flex;flex-wrap:wrap;gap:6px}
+.cert-pill{
+  font-size:0.68rem;padding:3px 9px;border:1px solid rgba(185,160,104,0.25);
+  color:var(--teak);border-radius:2px;letter-spacing:0.04em;
+}
+
+/* Philosophy */
+.philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px}
+.philosophy-item{padding:32px;border-top:2px solid var(--teak)}
+.philosophy-item h4{font-family:var(--ff-display);font-size:1.15rem;margin-bottom:12px}
+.philosophy-item p{font-size:0.87rem;color:var(--muted);line-height:1.65}
+
+/* ── SERVICES PAGE ───────────────────────────────────────────── */
+.services-category{margin-bottom:72px}
+.services-category-header{
+  display:flex;align-items:baseline;gap:20px;
+  border-bottom:1px solid rgba(185,160,104,0.2);padding-bottom:16px;margin-bottom:32px;
+}
+.services-category-header h3{font-family:var(--ff-display);font-size:1.5rem}
+.services-category-desc{font-size:0.85rem;color:var(--muted)}
+.services-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.service-list-card{
+  background:var(--white);border:1px solid rgba(185,160,104,0.1);
+  border-radius:4px;padding:24px;
+  transition:border-color .2s,box-shadow .2s;cursor:pointer;
+}
+.service-list-card:hover{border-color:var(--teak);box-shadow:0 4px 24px rgba(185,160,104,0.08)}
+.service-list-card h4{font-family:var(--ff-display);font-size:1.05rem;margin-bottom:8px}
+.service-list-card p{font-size:0.83rem;color:var(--muted);line-height:1.55;margin-bottom:14px}
+.service-price-row{display:flex;align-items:center;justify-content:space-between}
+.service-list-price{font-size:0.82rem;font-weight:600;color:var(--teak)}
+.service-list-link{font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.service-list-card:hover .service-list-link{color:var(--teak)}
+
+/* Membership promo banner */
+.membership-banner{
+  background:var(--black);border:1px solid rgba(185,160,104,0.25);
+  border-radius:4px;padding:32px 40px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  margin-bottom:60px;
+}
+.membership-banner h3{
+  font-family:var(--ff-display);font-size:1.3rem;color:var(--white);
+  font-style:italic;margin-bottom:6px;
+}
+.membership-banner p{font-size:0.85rem;color:rgba(255,255,255,0.55)}
+.membership-banner-price{
+  text-align:center;flex-shrink:0;
+}
+.membership-banner-num{font-family:var(--ff-display);font-size:2.2rem;color:var(--teak);line-height:1}
+.membership-banner-desc{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.06em;text-transform:uppercase}
+
+/* ── GALLERY PAGE ────────────────────────────────────────────── */
+.gallery-filters{display:flex;gap:8px;margin-bottom:40px;flex-wrap:wrap}
+.filter-btn{
+  padding:9px 20px;font-size:0.75rem;letter-spacing:0.07em;text-transform:uppercase;
+  font-weight:600;border-radius:2px;cursor:pointer;font-family:var(--ff-body);
+  border:1px solid rgba(185,160,104,0.25);color:var(--muted);background:var(--white);
+  transition:all .2s;
+}
+.filter-btn.active,.filter-btn:hover{
+  background:var(--teak);color:var(--black);border-color:var(--teak);
+}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;
+}
+.gallery-item{
+  background:var(--black);border-radius:4px;overflow:hidden;
+  border:1px solid rgba(185,160,104,0.1);cursor:pointer;
+  transition:border-color .2s;
+}
+.gallery-item:hover{border-color:var(--teak)}
+.gallery-ba{display:flex;aspect-ratio:4/5}
+.gallery-side{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:20px 10px;
+  background:linear-gradient(160deg,#111 0%,#1a1508 100%);
+}
+.gallery-side+.gallery-side{
+  border-left:1px solid rgba(185,160,104,0.15);
+  background:linear-gradient(160deg,#0d1a0d 0%,#111 100%);
+}
+.gallery-side-label{
+  font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);margin-bottom:6px;
+}
+.gallery-avatar{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(185,160,104,0.1);border:1px solid rgba(185,160,104,0.2);
+}
+.gallery-info{padding:14px 16px}
+.gallery-treatment{font-size:0.82rem;font-weight:600;color:var(--body-text)}
+.gallery-meta{font-size:0.72rem;color:var(--muted);margin-top:3px}
+
+/* ── MEMBERSHIP PAGE ─────────────────────────────────────────── */
+.membership-tiers{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:60px;
+}
+.tier-card{
+  background:var(--white);border:1px solid rgba(185,160,104,0.15);
+  border-radius:4px;overflow:hidden;transition:border-color .2s;
+}
+.tier-card:hover{border-color:var(--teak)}
+.tier-card.featured{border-color:var(--teak);border-width:2px;position:relative}
+.tier-popular{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--teak);color:var(--black);
+  font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;
+  padding:4px 14px;border-radius:0 0 4px 4px;white-space:nowrap;
+}
+.tier-header{background:var(--black);padding:28px 24px}
+.tier-name{
+  font-family:var(--ff-display);font-size:1.1rem;color:var(--white);
+  font-style:italic;margin-bottom:6px;
+}
+.tier-price{
+  display:flex;align-items:baseline;gap:4px;margin-top:12px;
+}
+.tier-dollar{font-size:1.2rem;color:var(--teak);font-weight:600;margin-top:4px}
+.tier-amount{font-family:var(--ff-display);font-size:2.4rem;color:var(--teak);line-height:1}
+.tier-period{font-size:0.75rem;color:rgba(255,255,255,0.4)}
+.tier-pitch{font-size:0.82rem;color:rgba(255,255,255,0.5);margin-top:10px;line-height:1.5}
+.tier-body{padding:24px}
+.tier-value{
+  font-size:0.75rem;color:var(--teak);font-weight:600;margin-bottom:16px;
+  padding:8px 12px;background:rgba(185,160,104,0.07);border-radius:2px;
+}
+.tier-includes{list-style:none;margin-bottom:20px}
+.tier-includes li{
+  font-size:0.81rem;color:var(--muted);padding:6px 0;
+  border-bottom:1px solid rgba(185,160,104,0.08);display:flex;gap:8px;align-items:flex-start;
+}
+.tier-includes li::before{content:'✓';color:var(--teak);font-size:0.75rem;margin-top:2px;flex-shrink:0}
+.tier-milestone{
+  font-size:0.75rem;color:var(--teak);font-style:italic;
+  padding:10px 12px;background:rgba(185,160,104,0.06);border-radius:2px;margin-bottom:16px;
+}
+
+/* Comparison table */
+.compare-table{width:100%;border-collapse:collapse;font-size:0.84rem}
+.compare-table th{
+  background:var(--black);color:var(--white);padding:14px 16px;
+  text-align:left;font-weight:500;font-size:0.78rem;
+  border-bottom:2px solid var(--teak);
+}
+.compare-table th:first-child{color:var(--teak);letter-spacing:0.04em}
+.compare-table td{
+  padding:12px 16px;border-bottom:1px solid rgba(185,160,104,0.1);color:var(--muted);
+}
+.compare-table tr:nth-child(even) td{background:var(--warm-white)}
+.check{color:var(--teak);font-weight:700}
+.dash{color:rgba(185,160,104,0.25)}
+
+/* ── PROMOTIONS PAGE ─────────────────────────────────────────── */
+.promo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-bottom:60px}
+.promo-card{
+  background:var(--white);border:1px solid rgba(185,160,104,0.12);
+  border-radius:4px;overflow:hidden;
+}
+.promo-banner{
+  background:var(--black);padding:28px;
+  border-bottom:2px solid var(--teak);
+}
+.promo-tag{
+  font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--teak);font-weight:700;margin-bottom:10px;display:block;
+}
+.promo-name{font-family:var(--ff-display);font-size:1.3rem;color:var(--white);font-style:italic;margin-bottom:6px}
+.promo-discount{font-size:0.85rem;color:rgba(255,255,255,0.55)}
+.promo-body{padding:24px}
+.promo-desc{font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.promo-expiry{font-size:0.75rem;color:var(--muted);margin-top:12px;display:flex;align-items:center;gap:6px}
+.promo-expiry::before{content:'⏱';font-size:0.8rem}
+
+.empty-promo{
+  background:var(--black);border:1px solid rgba(185,160,104,0.2);
+  border-radius:4px;padding:60px;text-align:center;
+  margin-bottom:40px;
+}
+.empty-promo h3{font-family:var(--ff-display);color:var(--white);font-style:italic;margin-bottom:12px}
+.empty-promo p{color:rgba(255,255,255,0.45);margin-bottom:24px;font-size:0.9rem}
+
+/* ── CONTACT PAGE ────────────────────────────────────────────── */
+.contact-page-grid{display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:start}
+.map-placeholder{
+  height:280px;background:linear-gradient(135deg,#1a1a1a,#252015);
+  border-radius:4px;border:1px solid rgba(185,160,104,0.15);
+  display:flex;align-items:center;justify-content:center;margin-top:32px;
+  font-size:0.85rem;color:rgba(185,160,104,0.4);
+}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:12px}
+.hours-row{display:flex;justify-content:space-between;font-size:0.82rem;padding:6px 0;border-bottom:1px solid rgba(185,160,104,0.1)}
+.hours-row:last-child{border:none}
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+.footer{
+  background:var(--black);padding:60px 24px 32px;
+  border-top:1px solid rgba(185,160,104,0.15);
+}
+.footer-inner{max-width:var(--max-w);margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand-logo{
+  font-family:var(--ff-display);font-style:italic;font-size:1.5rem;
+  color:var(--teak);margin-bottom:14px;
+}
+.footer-tagline{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.65;max-width:260px}
+.footer-col h5{
+  font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--teak);font-weight:600;margin-bottom:16px;
+}
+.footer-col a,.footer-col p{
+  display:block;font-size:0.82rem;color:rgba(255,255,255,0.45);
+  margin-bottom:8px;transition:color .2s;line-height:1.5;
+}
+.footer-col a:hover{color:var(--teak)}
+.footer-address{font-style:normal}
+.footer-bottom{
+  border-top:1px solid rgba(185,160,104,0.12);padding-top:24px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3)}
+.footer-social{display:flex;gap:12px}
+.footer-social a{
+  width:34px;height:34px;border-radius:50%;
+  border:1px solid rgba(185,160,104,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.5)!important;font-size:0.8rem;
+  transition:all .2s;margin-bottom:0;
+}
+.footer-social a:hover{border-color:var(--teak);color:var(--teak)!important}
+.financing-strip{
+  background:rgba(185,160,104,0.05);border:1px solid rgba(185,160,104,0.15);
+  border-radius:3px;padding:12px 20px;display:flex;align-items:center;gap:16px;
+  margin-top:20px;flex-wrap:wrap;
+}
+.financing-strip-label{font-size:0.73rem;color:rgba(255,255,255,0.4);letter-spacing:0.05em;text-transform:uppercase;flex-shrink:0}
+.financing-badge{
+  font-size:0.75rem;padding:5px 12px;border-radius:2px;
+  background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.6);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+/* ── Page hero (inner pages) ─────────────────────────────────── */
+.page-hero{
+  background:var(--black);padding:72px 24px 60px;text-align:center;
+  border-bottom:1px solid rgba(185,160,104,0.15);
+}
+.page-hero .container{max-width:680px}
+.page-hero h1{
+  font-family:var(--ff-display);font-style:italic;color:var(--white);
+  font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:16px;
+}
+.page-hero p{color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.7}
+.breadcrumb{
+  display:flex;align-items:center;gap:8px;justify-content:center;
+  font-size:0.73rem;letter-spacing:0.06em;text-transform:uppercase;
+  color:rgba(255,255,255,0.3);margin-bottom:16px;
+}
+.breadcrumb span{color:var(--teak)}
+
+/* ── Booking CTA strip ───────────────────────────────────────── */
+.booking-strip{
+  background:var(--teak);padding:48px 24px;text-align:center;
+}
+.booking-strip h2{
+  font-family:var(--ff-display);font-style:italic;color:var(--black);
+  font-size:2rem;margin-bottom:10px;
+}
+.booking-strip p{color:rgba(0,0,0,0.6);margin-bottom:24px;font-size:0.95rem}
+.btn-black{background:var(--black);color:var(--white)}
+.btn-black:hover{background:#222}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-actions{justify-content:center}
+  .about-strip{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-page-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .membership-tiers{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .membership-tiers{grid-template-columns:1fr}
+  .ba-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .ig-strip{grid-template-columns:repeat(3,1fr)}
+  .proof-bar-inner{justify-content:center;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="goto('home')">Beauty Goals LV</div>
+    <div class="nav-links">
+      <button onclick="goto('home')">Home</button>
+      <button onclick="goto('about')">About</button>
+      <div class="services-dropdown">
+        <button onclick="goto('services')">Services ▾</button>
+        <div class="mega-menu">
+          <div>
+            <div class="mega-col-head">Injectables</div>
+            <a class="mega-item" onclick="goto('services')">Botox & Neurotoxins <span>From $450</span></a>
+            <a class="mega-item" onclick="goto('services')">Dermal Fillers <span>From $550</span></a>
+            <a class="mega-item" onclick="goto('services')">Lip Filler <span>From $550</span></a>
+            <div class="mega-col-head" style="margin-top:20px">Body Contouring</div>
+            <a class="mega-item" onclick="goto('services')">Emsculpt Neo <span>Consultation required</span></a>
+            <a class="mega-item" onclick="goto('services')">Emsella <span>Pelvic floor therapy</span></a>
+          </div>
+          <div>
+            <div class="mega-col-head">Facials & Lasers</div>
+            <a class="mega-item" onclick="goto('services')">HydraFacial <span>From $205</span></a>
+            <a class="mega-item" onclick="goto('services')">Diamond Glow <span>From $215</span></a>
+            <a class="mega-item" onclick="goto('services')">Aerolase Neo Elite <span>30+ conditions treated</span></a>
+            <a class="mega-item" onclick="goto('services')">IPL Photofacial <span>From $210</span></a>
+            <div class="mega-col-head" style="margin-top:20px">Specialty</div>
+            <a class="mega-item" onclick="goto('services')">Sofwave Non-Surgical Lift <span>FDA-cleared, no downtime</span></a>
+            <a class="mega-item" onclick="goto('services')">XERF Skin Tightening <span>New at Beauty Goals LV</span></a>
+            <a class="mega-item" onclick="goto('services')">Thread Lift <span>Minimally invasive lifting</span></a>
+          </div>
+        </div>
+      </div>
+      <button onclick="goto('gallery')">Gallery</button>
+      <button onclick="goto('membership')">Membership</button>
+      <button onclick="goto('promotions')">Promotions</button>
+      <button onclick="goto('contact')" class="nav-cta">Book Now</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HOME PAGE ════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+  <div class="page-wrap">
+
+    <!-- Hero -->
+    <div style="background:var(--black)">
+      <div class="hero">
+        <div class="hero-left">
+          <span class="hero-eyebrow">Las Vegas Premier Med Spa</span>
+          <h1>Where <em>expertise</em> meets natural beauty.</h1>
+          <p class="hero-sub">Michelle Tio-Nguyen, FNP-C — 10 years of master-level injectables, advanced lasers, and personalized aesthetic medicine at 8961 W. Sahara Ave.</p>
+          <div class="hero-actions">
+            <button class="btn btn-gold" onclick="goto('contact')">Book a Consultation</button>
+            <button class="btn btn-outline-white" onclick="goto('services')">Explore Services</button>
+          </div>
+          <p class="hero-membership">Membership from <strong>$99/mo</strong> — 10–15% off all services · Credits always roll over</p>
+        </div>
+        <div class="hero-right">
+          <div class="hero-stats">
+            <div><div class="stat-num">13+</div><div class="stat-label">Years medical experience</div></div>
+            <div><div class="stat-num">10+</div><div class="stat-label">Years aesthetic medicine</div></div>
+            <div><div class="stat-num">15+</div><div class="stat-label">Advanced treatments</div></div>
+            <div><div class="stat-num">8K</div><div class="stat-label">Instagram followers</div></div>
+          </div>
+          <div class="hero-treatments">
+            <div class="hero-treatments-label">Treatments offered</div>
+            <div class="treatment-pills">
+              <span class="treatment-pill">Botox</span>
+              <span class="treatment-pill">Fillers</span>
+              <span class="treatment-pill">Sofwave</span>
+              <span class="treatment-pill">XERF</span>
+              <span class="treatment-pill">Aerolase</span>
+              <span class="treatment-pill">HydraFacial</span>
+              <span class="treatment-pill">Emsculpt Neo</span>
+              <span class="treatment-pill">Thread Lift</span>
+              <span class="treatment-pill">Microneedling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social proof bar -->
+    <div class="proof-bar">
+      <div class="proof-bar-inner">
+        <div class="proof-item"><div class="proof-num">★ 5.0</div><div class="proof-desc">Google rating</div></div>
+        <div class="proof-item"><div class="proof-num">8,000+</div><div class="proof-desc">Instagram followers</div></div>
+        <div class="proof-item"><div class="proof-num">13 yrs</div><div class="proof-desc">Medical expertise</div></div>
+        <div class="proof-item"><div class="proof-num">CareCredit</div><div class="proof-desc">Financing available</div></div>
+        <div class="proof-item"><div class="proof-num">Patientfi</div><div class="proof-desc">Payment plans</div></div>
+      </div>
+    </div>
+
+    <!-- Services overview -->
+    <div class="section section-warm">
+      <div class="container">
+        <span class="eyebrow">Our Treatments</span>
+        <h2 style="margin-bottom:12px">Everything your skin needs, under one roof.</h2>
+        <p class="lead" style="margin-bottom:48px">From a first-time HydraFacial to a full-face Sofwave lift, every treatment is tailored to your goals by our licensed team.</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">💉</div>
+            <h4>Botox & Neurotoxins</h4>
+            <p>Reduce fine lines and wrinkles, slim the jawline, or treat hyperhidrosis. Precise, natural results.</p>
+            <div class="service-price">Starting at $450</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">✨</div>
+            <h4>Dermal Fillers</h4>
+            <p>Restore volume, enhance contour, and achieve facial balance with expert hyaluronic acid injections.</p>
+            <div class="service-price">Starting at $550</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🌊</div>
+            <h4>Sofwave Non-Surgical Lift</h4>
+            <p>FDA-cleared ultrasound technology that lifts and tightens skin with zero downtime. One treatment.</p>
+            <div class="service-price">Consultation required</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">⚡</div>
+            <h4>XERF Skin Tightening</h4>
+            <p>Dual-frequency radiofrequency for firmer, tighter skin. No needles, no downtime — real results.</p>
+            <div class="service-price">New — ask for pricing</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💎</div>
+            <h4>HydraFacial & Diamond Glow</h4>
+            <p>Medical-grade resurfacing, extraction, and deep hydration. The gold standard for radiant skin.</p>
+            <div class="service-price">Starting at $205</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔬</div>
+            <h4>Aerolase Neo Elite</h4>
+            <p>650-microsecond laser treats 30+ conditions — acne, melasma, rosacea — safe for all skin types.</p>
+            <div class="service-price">Consultation required</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💪</div>
+            <h4>Emsculpt Neo</h4>
+            <p>Build muscle and eliminate fat simultaneously. 30% fat reduction + 25% muscle increase, on average.</p>
+            <div class="service-price">Packages available</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🧵</div>
+            <h4>Thread Lift</h4>
+            <p>Minimally invasive PDO threads for dramatic lifting without surgery. Stimulates collagen long-term.</p>
+            <div class="service-price">Consultation required</div>
+            <span class="service-link" onclick="goto('services')">View treatment →</span>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px">
+          <button class="btn btn-outline" onclick="goto('services')">View all services &amp; pricing</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Michelle strip -->
+    <div class="section section-white">
+      <div class="container">
+        <div class="about-strip">
+          <div class="about-img-placeholder"></div>
+          <div>
+            <span class="eyebrow">Meet Michelle</span>
+            <h2 style="margin-bottom:20px">Master injector. Skin expert. Your partner.</h2>
+            <p class="lead" style="margin-bottom:28px">Michelle Tio-Nguyen, FNP-C brings 13 years of medical expertise and a decade of aesthetic mastery to every appointment. Her approach: listen first, treat second — always preserving what makes you, you.</p>
+            <div class="credential-list">
+              <div class="credential">Family Nurse Practitioner — Board Certified (FNP-C)</div>
+              <div class="credential">Master injector — Botulinum Toxin, Dermal Filler, PDO Threads</div>
+              <div class="credential">Certified in Regenerative Aesthetics & Advanced Anti-Aging</div>
+              <div class="credential">Expert in cosmetic lasers: Aerolase, Sofwave, Erbium, IPL</div>
+              <div class="credential">Regular attendee — national aesthetics conferences & trainings</div>
+            </div>
+            <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+              <button class="btn btn-gold" onclick="goto('about')">Meet the full team</button>
+              <button class="btn btn-outline" onclick="goto('contact')">Book with Michelle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Before/After preview -->
+    <div class="section section-warm">
+      <div class="container">
+        <span class="eyebrow">Real Results</span>
+        <h2 style="margin-bottom:12px">Results that speak for themselves.</h2>
+        <p class="lead" style="margin-bottom:40px">Every photo is a real Beauty Goals LV client. No filters, no stock images.</p>
+        <div class="ba-grid">
+          <div class="ba-card">
+            <div class="ba-placeholder"><div class="ba-label-pair"><div class="ba-half">Before</div><div class="ba-half">After</div></div></div>
+            <div class="ba-info"><div class="ba-treatment">Full Face Rejuvenation</div><div class="ba-area">Botox + Filler • 1 session</div></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-placeholder"><div class="ba-label-pair"><div class="ba-half">Before</div><div class="ba-half">After</div></div></div>
+            <div class="ba-info"><div class="ba-treatment">Acne Correction</div><div class="ba-area">Aerolase • 3 sessions</div></div>
+          </div>
+          <div class="ba-card">
+            <div class="ba-placeholder"><div class="ba-label-pair"><div class="ba-half">Before</div><div class="ba-half">After</div></div></div>
+            <div class="ba-info"><div class="ba-treatment">Facial Balancing</div><div class="ba-area">Filler • Cheeks + Chin</div></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px">
+          <button class="btn btn-outline" onclick="goto('gallery')">View full gallery →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="section section-dark">
+      <div class="container">
+        <span class="eyebrow" style="color:var(--teak)">Client Reviews</span>
+        <h2 style="color:var(--white);margin-bottom:48px">What our clients say.</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+          <div style="background:rgba(185,160,104,0.06);border:1px solid rgba(185,160,104,0.15);border-radius:4px;padding:28px">
+            <div style="color:var(--teak);margin-bottom:12px;font-size:1rem">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;margin-bottom:20px;font-style:italic">"She's precise, she listens to what your goals are, she's informative and always has her client's best interest in mind. I can't recommend her enough."</p>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(185,160,104,0.2);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--teak);font-weight:600">TR</div>
+              <div><div style="color:var(--white);font-size:0.82rem;font-weight:500">Tasha R.</div><div style="color:rgba(255,255,255,0.35);font-size:0.72rem">Botox + Fillers · Verified Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:rgba(185,160,104,0.06);border:1px solid rgba(185,160,104,0.15);border-radius:4px;padding:28px">
+            <div style="color:var(--teak);margin-bottom:12px;font-size:1rem">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;margin-bottom:20px;font-style:italic">"She educates you about the treatments and lets you know if you need it or not. It immediately slimmed down my face — something I never thought would happen!"</p>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(185,160,104,0.2);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--teak);font-weight:600">MA</div>
+              <div><div style="color:var(--white);font-size:0.82rem;font-weight:500">Michelle A.</div><div style="color:rgba(255,255,255,0.35);font-size:0.72rem">Botox + Chin Filler · Verified Google Review</div></div>
+            </div>
+          </div>
+          <div style="background:rgba(185,160,104,0.06);border:1px solid rgba(185,160,104,0.15);border-radius:4px;padding:28px">
+            <div style="color:var(--teak);margin-bottom:12px;font-size:1rem">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;margin-bottom:20px;font-style:italic">"She looks at the patient as a whole person. Takes her time and takes everything into consideration. Both my mom and I are very happy with the results."</p>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(185,160,104,0.2);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--teak);font-weight:600">KC</div>
+              <div><div style="color:var(--white);font-size:0.82rem;font-weight:500">K.C.</div><div style="color:rgba(255,255,255,0.35);font-size:0.72rem">Multiple treatments · Verified Google Review</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram feed -->
+    <div class="section section-warm">
+      <div class="container">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:16px">
+          <div>
+            <span class="eyebrow">Instagram</span>
+            <h2>@beautygoalslv</h2>
+          </div>
+          <a href="https://instagram.com/beautygoalslv" target="_blank" class="btn btn-outline btn-sm">Follow us</a>
+        </div>
+        <div class="ig-strip">
+          <div class="ig-tile"><div class="ig-tile-label">Real results & tips</div></div>
+          <div class="ig-tile"><div class="ig-tile-label">Before & after</div></div>
+          <div class="ig-tile"><div class="ig-tile-label">Treatment reels</div></div>
+          <div class="ig-tile"><div class="ig-tile-label">Glow tips</div></div>
+          <div class="ig-tile"><div class="ig-tile-label">New services</div></div>
+          <div class="ig-tile"><div class="ig-tile-label">Behind the scenes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking CTA -->
+    <div class="booking-strip">
+      <h2>Ready to achieve your beauty goals?</h2>
+      <p>Complimentary consultations available. We respond within 24 hours.</p>
+      <button class="btn btn-black" onclick="goto('contact')">Book a Free Consultation</button>
+    </div>
+
+    <!-- Contact preview -->
+    <div class="section section-dark">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow" style="color:var(--teak)">Contact Us</span>
+            <h2 style="color:var(--white);margin-bottom:20px">Let's start your glow-up.</h2>
+            <p style="color:rgba(255,255,255,0.55);margin-bottom:32px;line-height:1.7">Fill out the form and we'll be in touch within 24 hours. Prefer to call? We're at 702-625-3838 during business hours.</p>
+            <div class="contact-detail">
+              <span class="contact-icon">📍</span>
+              <div><div class="contact-label">Address</div>8961 W. Sahara Avenue, Suite 106<br>Las Vegas, NV 89117</div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📞</span>
+              <div><div class="contact-label">Phone</div>(702) 625-3838</div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">✉️</span>
+              <div><div class="contact-label">Email</div>beautygoalsLV@gmail.com</div>
+            </div>
+            <div class="response-badge">⏱ We respond within 24 hours</div>
+            <div class="financing-strip" style="margin-top:24px">
+              <span class="financing-strip-label">Financing</span>
+              <span class="financing-badge">CareCredit</span>
+              <span class="financing-badge">Patientfi</span>
+            </div>
+          </div>
+          <div>
+            <div class="form-field"><label>Full name</label><input type="text" placeholder="Your name"></div>
+            <div class="form-field"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+            <div class="form-field"><label>Phone</label><input type="tel" placeholder="(702) 000-0000"></div>
+            <div class="form-field"><label>Treatment interested in</label>
+              <select>
+                <option value="">Select a treatment...</option>
+                <option>Botox / Neurotoxins</option>
+                <option>Dermal Fillers</option>
+                <option>Lip Filler</option>
+                <option>Sofwave Non-Surgical Lift</option>
+                <option>XERF Skin Tightening</option>
+                <option>Aerolase Neo Elite</option>
+                <option>HydraFacial</option>
+                <option>Diamond Glow</option>
+                <option>Emsculpt Neo / Emsella</option>
+                <option>Thread Lift</option>
+                <option>Microneedling</option>
+                <option>Membership inquiry</option>
+                <option>Not sure — need a consultation</option>
+              </select>
+            </div>
+            <div class="form-field"><label>Message (optional)</label><textarea placeholder="Any questions or goals you'd like to share..."></textarea></div>
+            <button class="btn btn-gold" style="width:100%">Send Message</button>
+            <div class="form-sub">🔒 Your information is private and secure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT PAGE ════════════════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ About Us</span></div>
+        <h1>Meet the team behind your glow.</h1>
+        <p>Three licensed professionals, one shared goal — helping you look and feel like the best version of yourself.</p>
+      </div>
+    </div>
+
+    <div class="section section-warm">
+      <div class="container">
+        <span class="eyebrow">Our Providers</span>
+        <h2 style="margin-bottom:40px">Expert hands. Genuine care.</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-img">Michelle Tio-Nguyen, FNP-C</div>
+            <div class="team-body">
+              <div class="team-name">Michelle Tio-Nguyen</div>
+              <div class="team-title">FNP-C · CEO &amp; Master Injector</div>
+              <p class="team-bio">With 13 years in medicine and 10 years in aesthetic practice, Michelle specializes in facial balancing, full-face rejuvenation, and natural results. She is a master injector of Botulinum Toxin, Dermal Filler, and PDO threads, and an expert in cosmetic lasers. She regularly attends advanced training in Regenerative Aesthetics and Anti-Aging Procedures.</p>
+              <div class="team-certs">
+                <span class="cert-pill">FNP-C Board Certified</span>
+                <span class="cert-pill">Master Injector</span>
+                <span class="cert-pill">PDO Threads</span>
+                <span class="cert-pill">Sofwave Certified</span>
+                <span class="cert-pill">Aerolase Trained</span>
+                <span class="cert-pill">Regenerative Aesthetics</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-img">Jennifer Guizar</div>
+            <div class="team-body">
+              <div class="team-name">Jennifer Guizar</div>
+              <div class="team-title">Advanced Medical Aesthetician</div>
+              <p class="team-bio">Jennifer brings passion and precision to every treatment. Certified in HydraFacial, Diamond Glow, Microneedling RF, Dermaplaning, Erbium Laser, PRX Peel, and laser hair removal, she creates fully customized skincare plans for each client's unique needs and skin type.</p>
+              <div class="team-certs">
+                <span class="cert-pill">HydraFacial Certified</span>
+                <span class="cert-pill">Diamond Glow</span>
+                <span class="cert-pill">Microneedling RF</span>
+                <span class="cert-pill">Erbium Laser</span>
+                <span class="cert-pill">PRX Peel</span>
+                <span class="cert-pill">Laser Hair Removal</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-img">Zayna Rodriguez</div>
+            <div class="team-body">
+              <div class="team-name">Zayna Rodriguez</div>
+              <div class="team-title">Advanced Medical Aesthetician</div>
+              <p class="team-bio">Born and raised in Oahu, HI, Zayna brings warmth and meticulous skill to every appointment. She specializes in HydraFacials, laser treatments, and microneedling, and is known for building lasting relationships with her clients and crafting experiences tailored to each person's journey.</p>
+              <div class="team-certs">
+                <span class="cert-pill">HydraFacial Trained</span>
+                <span class="cert-pill">Laser Treatments</span>
+                <span class="cert-pill">Microneedling</span>
+                <span class="cert-pill">Chemical Peels</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-white">
+      <div class="container">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2>Beauty should feel like you — just better.</h2>
+        <div class="philosophy-grid">
+          <div class="philosophy-item">
+            <h4>Personalized above all</h4>
+            <p>No two faces are the same. Every plan begins with a thorough consultation where we listen — really listen — to your concerns, goals, and lifestyle before recommending a single treatment.</p>
+          </div>
+          <div class="philosophy-item">
+            <h4>Natural results, always</h4>
+            <p>We believe in enhancing what you have, not changing who you are. Our goal is results so natural that people ask if you've been on vacation — not if you've had work done.</p>
+          </div>
+          <div class="philosophy-item">
+            <h4>Education first</h4>
+            <p>An informed client is our best client. We'll walk you through every treatment option, including whether you actually need it, so you can make decisions that are right for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="booking-strip">
+      <h2>Ready to meet the team?</h2>
+      <p>Complimentary consultations with Michelle, Jennifer, or Zayna — your choice.</p>
+      <button class="btn btn-black" onclick="goto('contact')">Book Your Consultation</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SERVICES PAGE ════════════════════════════════════════════ -->
+<div id="page-services" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ Services</span></div>
+        <h1>Every treatment, tailored to you.</h1>
+        <p>15+ advanced services from injectables to body contouring, delivered by Las Vegas's most experienced aesthetic team.</p>
+      </div>
+    </div>
+
+    <div class="section section-warm">
+      <div class="container">
+        <div class="membership-banner">
+          <div>
+            <h3>Glow Getter Membership</h3>
+            <p>10% off injectables · 15% off all other services · Credits roll over every month</p>
+          </div>
+          <div class="membership-banner-price">
+            <div class="membership-banner-num">$99</div>
+            <div class="membership-banner-desc">per month</div>
+          </div>
+          <button class="btn btn-outline" onclick="goto('membership')">See all plans</button>
+        </div>
+
+        <div class="services-category">
+          <div class="services-category-header">
+            <span class="tag">Injectables</span>
+            <span class="services-category-desc">Neurotoxins &amp; hyaluronic acid fillers — performed by Michelle Tio-Nguyen, FNP-C</span>
+          </div>
+          <div class="services-list">
+            <div class="service-list-card">
+              <h4>Botox / Dysport / Xeomin / Daxxify</h4>
+              <p>Temporarily relax overactive muscles to smooth forehead lines, crow's feet, and frown lines. Also treats jaw clenching (TMJ) and excessive sweating.</p>
+              <div class="service-price-row">
+                <span class="service-list-price">Botox $550 · Dysport $600 · Xeomin $450 · Daxxify from $800 · Letybo $650</span>
+              </div>
+            </div>
+            <div class="service-list-card">
+              <h4>Dermal Fillers</h4>
+              <p>Add volume, smooth deep lines, and create facial balance with hyaluronic acid filler. Areas include cheeks, chin, jaw, under-eye, nose, and laugh lines.</p>
+              <div class="service-price-row">
+                <span class="service-list-price">From $550 · Facial balancing from $1,100</span>
+              </div>
+            </div>
+            <div class="service-list-card">
+              <h4>Lip Filler</h4>
+              <p>Natural-looking volume and definition using hyaluronic acid. Fully reversible. We prioritize proportion and balance over dramatic size.</p>
+              <div class="service-price-row">
+                <span class="service-list-price">Starting at $550</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-category">
+          <div class="services-category-header">
+            <span class="tag">Facials &amp; Lasers</span>
+            <span class="services-category-desc">Medical-grade skin treatments performed by our advanced aestheticians</span>
+          </div>
+          <div class="services-list">
+            <div class="service-list-card">
+              <h4>HydraFacial</h4>
+              <p>Patented 4-in-1 cleanse, exfoliate, extract, and hydrate treatment. Immediate glow, zero downtime. Add Dermaplaning, LED, or specialty boosters.</p>
+              <div class="service-price-row"><span class="service-list-price">From $205 · Deluxe $269</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Diamond Glow</h4>
+              <p>Diamond-tip resurfacing + simultaneous infusion of medical-grade serums. Next-level deep cleanse for lasting radiance.</p>
+              <div class="service-price-row"><span class="service-list-price">Express $215 · Deluxe $275</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Microneedling</h4>
+              <p>FDA-cleared collagen induction therapy. Add PRP, PRF, Exosome, or Rejuran for amplified results. Treats scars, pores, texture, and wrinkles.</p>
+              <div class="service-price-row"><span class="service-list-price">From $375 · With RF from $650</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>IPL Photofacial</h4>
+              <p>Broadband light targets sun spots, age spots, redness, and rosacea. Stimulates collagen and evens skin tone with minimal downtime.</p>
+              <div class="service-price-row"><span class="service-list-price">Full face $225 · Acne $210</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Chemical Peels</h4>
+              <p>From light maintenance peels ($50) to deeper resurfacing peels targeting acne, pigmentation, and aging. ZO-3 Step Peel available.</p>
+              <div class="service-price-row"><span class="service-list-price">From $50 · Medium depth from $250</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Erbium Laser Resurfacing</h4>
+              <p>Resurface the face, neck, chest, and hands. Fractionated for minimal downtime ("glass skin") or fully ablative for maximum results.</p>
+              <div class="service-price-row"><span class="service-list-price">Fractionated from $400 · Ablative from $600</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-category">
+          <div class="services-category-header">
+            <span class="tag">Specialty Treatments</span>
+            <span class="services-category-desc">Advanced technology for lifting, tightening, and transformation</span>
+          </div>
+          <div class="services-list">
+            <div class="service-list-card">
+              <h4>Sofwave Non-Surgical Face Lift</h4>
+              <p>FDA-cleared ultrasound technology delivers energy deep into the dermis to rebuild collagen. One treatment lifts brows, neck, and jawline. Safe for all skin types.</p>
+              <div class="service-price-row"><span class="service-list-price">Consultation required for pricing</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>XERF Skin Tightening</h4>
+              <p>Advanced dual-frequency radiofrequency tightens tissue, improves tone, and stimulates collagen remodeling. No needles, no downtime. 2–3 treatments recommended per year.</p>
+              <div class="service-price-row"><span class="service-list-price">Intro pricing — contact us</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Aerolase Neo Elite</h4>
+              <p>650-microsecond laser energy treats 30+ conditions including acne, melasma, rosacea, psoriasis, spider veins, and laser hair removal. Safe for all Fitzpatrick skin types.</p>
+              <div class="service-price-row"><span class="service-list-price">Consultation required for pricing</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Thread Lift (PDO)</h4>
+              <p>Dissolvable PDO sutures lift sagging skin and stimulate collagen production. A minimally invasive alternative to surgery for those wanting visible lift.</p>
+              <div class="service-price-row"><span class="service-list-price">Consultation required for pricing</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-category">
+          <div class="services-category-header">
+            <span class="tag">Body Contouring</span>
+            <span class="services-category-desc">Non-invasive fat reduction and muscle building</span>
+          </div>
+          <div class="services-list">
+            <div class="service-list-card">
+              <h4>Emsculpt Neo</h4>
+              <p>The only treatment that simultaneously eliminates fat AND builds muscle. 30-minute sessions deliver 30% fat reduction and 25% muscle increase on average. Certified by BTL.</p>
+              <div class="service-price-row"><span class="service-list-price">Packages available — consultation required</span></div>
+            </div>
+            <div class="service-list-card">
+              <h4>Emsella Pelvic Floor</h4>
+              <p>FDA-cleared electromagnetic treatment strengthens the pelvic floor to improve urinary incontinence and sexual wellness. Sit fully clothed for 28 minutes.</p>
+              <div class="service-price-row"><span class="service-list-price">Packages available — consultation required</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="background:rgba(185,160,104,0.06);border:1px solid rgba(185,160,104,0.15);border-radius:4px;padding:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <div style="flex:1"><strong>Financing available for all treatments</strong><br><span style="font-size:0.85rem;color:var(--muted)">CareCredit and Patientfi accepted. Ask about monthly payment plans for treatments over $500.</span></div>
+          <span class="financing-badge" style="background:rgba(185,160,104,0.1);color:var(--teak);border:1px solid rgba(185,160,104,0.3);font-size:0.8rem;padding:8px 16px">CareCredit</span>
+          <span class="financing-badge" style="background:rgba(185,160,104,0.1);color:var(--teak);border:1px solid rgba(185,160,104,0.3);font-size:0.8rem;padding:8px 16px">Patientfi</span>
+        </div>
+      </div>
+    </div>
+    <div class="booking-strip">
+      <h2>Not sure where to start?</h2>
+      <p>Book a complimentary consultation and we'll build your personalized treatment plan.</p>
+      <button class="btn btn-black" onclick="goto('contact')">Book a Free Consultation</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GALLERY PAGE ══════════════════════════════════════════════ -->
+<div id="page-gallery" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ Gallery</span></div>
+        <h1>Real clients. Real results.</h1>
+        <p>Every photo is an actual Beauty Goals LV client — no filters, no stock images.</p>
+      </div>
+    </div>
+    <div class="section section-warm">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="filter-btn active">All results</button>
+          <button class="filter-btn">Botox &amp; Fillers</button>
+          <button class="filter-btn">Facials &amp; Lasers</button>
+          <button class="filter-btn">Body Contouring</button>
+          <button class="filter-btn">Acne &amp; Pigmentation</button>
+          <button class="filter-btn">Facial Balancing</button>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Full Face Rejuvenation</div><div class="gallery-meta">Botox + Filler · 1 session</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Acne Correction</div><div class="gallery-meta">Aerolase Neo · 3 sessions</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Melasma Treatment</div><div class="gallery-meta">Laser · 4 sessions</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Facial Balancing</div><div class="gallery-meta">Cheeks + Chin filler</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Lip Enhancement</div><div class="gallery-meta">Hyaluronic acid filler · 1 syringe</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Emsculpt Neo</div><div class="gallery-meta">Abdomen · 4 sessions</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Under-Eye Filler</div><div class="gallery-meta">Tear trough · 1 syringe</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Jawline Slimming</div><div class="gallery-meta">Masseter Botox · 40 units</div></div></div>
+          <div class="gallery-item"><div class="gallery-ba"><div class="gallery-side"><div class="gallery-side-label">Before</div></div><div class="gallery-side"><div class="gallery-side-label">After</div></div></div><div class="gallery-info"><div class="gallery-treatment">Acne Scarring</div><div class="gallery-meta">Microneedling RF · 3 sessions</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MEMBERSHIP PAGE ══════════════════════════════════════════ -->
+<div id="page-membership" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ Membership</span></div>
+        <h1>Your skin, on a plan.</h1>
+        <p>Four membership tiers designed to make consistent, expert skincare achievable at every budget. Credits always roll over — never lose what you pay for.</p>
+      </div>
+    </div>
+    <div class="section section-warm">
+      <div class="container">
+        <div class="membership-tiers">
+          <div class="tier-card">
+            <div class="tier-header">
+              <div class="tier-name">Glow Getter</div>
+              <div class="tier-pitch">The entry point to member savings — your discount companion for any treatment.</div>
+              <div class="tier-price"><span class="tier-dollar">$</span><span class="tier-amount">99</span><span class="tier-period">/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <div class="tier-value">Estimated value: $130+ in savings monthly</div>
+              <ul class="tier-includes">
+                <li>10% off all injectable treatments</li>
+                <li>15% off all other services</li>
+                <li>10% off retail products</li>
+                <li>Monthly credit applies to any treatment or product</li>
+                <li>Credits roll over — never expire</li>
+              </ul>
+              <button class="btn btn-outline" style="width:100%" onclick="goto('contact')">Sign up — call (702) 625-3838</button>
+            </div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-header">
+              <div class="tier-name">Glow Up</div>
+              <div class="tier-pitch">One monthly treatment included — perfect for ongoing laser and facial maintenance.</div>
+              <div class="tier-price"><span class="tier-dollar">$</span><span class="tier-amount">175</span><span class="tier-period">/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <div class="tier-value">Estimated retail value: $210–$275/mo</div>
+              <ul class="tier-includes">
+                <li>HydraFacial</li>
+                <li>Medium Depth Chemical Peel</li>
+                <li>IPL Rejuvenation (full face)</li>
+                <li>Acne Photofacial</li>
+                <li>Melasma Laser Spot Treatment</li>
+                <li>Laser Hair Reduction (up to 1 large area)</li>
+              </ul>
+              <div class="tier-milestone">🎁 After 6 months: Free Microneedling or Fractionated Laser ($400 value)</div>
+              <button class="btn btn-outline" style="width:100%" onclick="goto('contact')">Sign up — call (702) 625-3838</button>
+            </div>
+          </div>
+          <div class="tier-card featured">
+            <div class="tier-popular">Most popular</div>
+            <div class="tier-header">
+              <div class="tier-name">Glow Goals</div>
+              <div class="tier-pitch">Premium monthly treatments — the sweet spot for serious skin transformation.</div>
+              <div class="tier-price"><span class="tier-dollar">$</span><span class="tier-amount">225</span><span class="tier-period">/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <div class="tier-value">Estimated retail value: $269–$500+/mo</div>
+              <ul class="tier-includes">
+                <li>HydraFacial Deluxe ($269 value)</li>
+                <li>Diamond Glow Deluxe ($275 value)</li>
+                <li>Melasma Laser × 2 sessions</li>
+                <li>PRX No-Peel Peel</li>
+                <li>Emsella session</li>
+                <li>Fractionated Laser Resurfacing (face)</li>
+                <li>ZO-3 Step Peel</li>
+                <li>Laser Hair Reduction (2 medium or 1 XL area)</li>
+              </ul>
+              <div class="tier-milestone">🎁 After 6 months: Free Microneedling with RF or Erbium Laser ($650 value)</div>
+              <button class="btn btn-gold" style="width:100%" onclick="goto('contact')">Sign up — call (702) 625-3838</button>
+            </div>
+          </div>
+          <div class="tier-card">
+            <div class="tier-header">
+              <div class="tier-name">Ultimate Goals</div>
+              <div class="tier-pitch">The most advanced monthly treatments available — for clients who want it all.</div>
+              <div class="tier-price"><span class="tier-dollar">$</span><span class="tier-amount">499</span><span class="tier-period">/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <div class="tier-value">Estimated retail value: $650–$1,000+/mo</div>
+              <ul class="tier-includes">
+                <li>Microneedling with PRP, PRF, Exosome, or Rejuran</li>
+                <li>Pixel-8 Microneedling RF (face)</li>
+                <li>Emsculpt Neo (any one area)</li>
+                <li>Erbium Fully Ablative Laser</li>
+                <li>Fractionated Laser — full face + neck + chest</li>
+                <li>PRX Skin Biostimulator × 2 sessions</li>
+                <li>Keravive Scalp Treatment + LED</li>
+                <li>Emsella × 2 sessions</li>
+                <li>Aerolase — face, lip, and neck</li>
+              </ul>
+              <div class="tier-milestone">🎁 After 6 months: Free Sofwave Lift or Daxxify treatment ($1,000 value)</div>
+              <button class="btn btn-outline" style="width:100%" onclick="goto('contact')">Sign up — call (702) 625-3838</button>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-family:var(--ff-display);margin-bottom:24px">Plan comparison</h3>
+        <div style="overflow-x:auto">
+        <table class="compare-table">
+          <thead><tr>
+            <th>Feature</th><th>Glow Getter<br>$99</th><th>Glow Up<br>$175</th><th>Glow Goals<br>$225</th><th>Ultimate<br>$499</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Monthly treatment included</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>10% off injectables</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>15% off other services</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>Credits roll over</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr><td>6-month milestone bonus</td><td class="dash">—</td><td>Free Microneedling ($400)</td><td>Free RF or Erbium ($650)</td><td>Free Sofwave or Daxxify ($1,000)</td></tr>
+            <tr><td>Access to Emsculpt / Emsella</td><td class="dash">—</td><td class="dash">—</td><td>Emsella included</td><td>Both included</td></tr>
+            <tr><td>Advanced laser treatments</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="booking-strip">
+      <h2>Ready to become a member?</h2>
+      <p>Call us or send a message — we'll find the right plan for your goals and budget.</p>
+      <button class="btn btn-black" onclick="goto('contact')">Get started</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PROMOTIONS PAGE ══════════════════════════════════════════ -->
+<div id="page-promotions" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ Promotions</span></div>
+        <h1>Current specials.</h1>
+        <p>Limited-time offers on treatments and memberships. All promotions valid at our Las Vegas location.</p>
+      </div>
+    </div>
+    <div class="section section-warm">
+      <div class="container">
+        <div class="promo-grid">
+          <div class="promo-card">
+            <div class="promo-banner">
+              <span class="promo-tag">New treatment — intro pricing</span>
+              <div class="promo-name">XERF Skin Tightening</div>
+              <div class="promo-discount">Special introductory rate — limited appointments</div>
+            </div>
+            <div class="promo-body">
+              <p class="promo-desc">Be among the first to experience XERF — our newest dual-frequency radiofrequency treatment for firmer, tighter skin. No needles, no downtime. Introductory pricing available for a limited time only.</p>
+              <button class="btn btn-gold btn-sm" onclick="goto('contact')">Claim this offer</button>
+              <div class="promo-expiry">Limited spots available — contact us for pricing</div>
+            </div>
+          </div>
+          <div class="promo-card">
+            <div class="promo-banner">
+              <span class="promo-tag">New client special</span>
+              <div class="promo-name">Complimentary Consultation + $50 Off</div>
+              <div class="promo-discount">$50 credit toward your first treatment</div>
+            </div>
+            <div class="promo-body">
+              <p class="promo-desc">First time at Beauty Goals LV? Book a complimentary consultation with Michelle or our aestheticians and receive a $50 credit toward any treatment booked on the same visit.</p>
+              <button class="btn btn-gold btn-sm" onclick="goto('contact')">Book your consult</button>
+              <div class="promo-expiry">Valid for new clients only · One per person</div>
+            </div>
+          </div>
+          <div class="promo-card">
+            <div class="promo-banner">
+              <span class="promo-tag">Bundle &amp; save</span>
+              <div class="promo-name">Tattoo Removal Package</div>
+              <div class="promo-discount">Buy 5 sessions, get the 6th free</div>
+            </div>
+            <div class="promo-body">
+              <p class="promo-desc">Commit to your full removal journey and save on session 6. Sizes from 2×2 ($100) to 10×10 ($300). Package pricing locked in at time of purchase.</p>
+              <button class="btn btn-gold btn-sm" onclick="goto('contact')">Get started</button>
+              <div class="promo-expiry">Ongoing offer · Cannot combine with membership discount</div>
+            </div>
+          </div>
+        </div>
+        <div class="empty-promo" style="background:var(--black);border:1px solid rgba(185,160,104,0.15);border-radius:4px;padding:48px;text-align:center">
+          <h3 style="font-family:var(--ff-display);color:var(--white);font-style:italic;margin-bottom:12px">Year-round savings with a membership</h3>
+          <p style="color:rgba(255,255,255,0.45);margin-bottom:24px">Members save 10–15% on every visit, every month — no waiting for a promotion.</p>
+          <button class="btn btn-gold" onclick="goto('membership')">View membership plans</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT PAGE ══════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-wrap">
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">Home <span>/ Contact</span></div>
+        <h1>Book your consultation.</h1>
+        <p>All consultations are complimentary. We respond within 24 hours — or call us directly at (702) 625-3838.</p>
+      </div>
+    </div>
+    <div class="section section-warm">
+      <div class="container">
+        <div class="contact-page-grid">
+          <div>
+            <span class="eyebrow">Get in touch</span>
+            <h2 style="margin-bottom:28px">We'd love to meet you.</h2>
+            <div class="contact-detail">
+              <span class="contact-icon">📍</span>
+              <div><div class="contact-label">Address</div>8961 W. Sahara Avenue, Suite 106<br>Las Vegas, NV 89117</div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📞</span>
+              <div><div class="contact-label">Phone</div>(702) 625-3838<br><span style="font-size:0.8rem;color:var(--muted)">Click to call on mobile</span></div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">✉️</span>
+              <div><div class="contact-label">Email</div>beautygoalsLV@gmail.com</div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📸</span>
+              <div><div class="contact-label">Instagram</div>@beautygoalslv · @beautygoalsbymichelle</div>
+            </div>
+            <div style="margin-top:8px">
+              <div class="contact-label" style="font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--teak);font-weight:600;margin-bottom:10px">Hours</div>
+              <div class="hours-grid">
+                <div class="hours-row"><span>Monday – Friday</span><span style="font-weight:500">10am – 6pm</span></div>
+                <div class="hours-row"><span>Saturday</span><span style="font-weight:500">10am – 4pm</span></div>
+                <div class="hours-row"><span>Sunday</span><span style="color:var(--muted)">By appointment</span></div>
+              </div>
+            </div>
+            <div class="response-badge" style="margin-top:20px">⏱ We respond within 24 hours</div>
+            <div class="map-placeholder">📍 Map — 8961 W. Sahara Ave, Las Vegas</div>
+          </div>
+          <div style="background:var(--white);border:1px solid rgba(185,160,104,0.12);border-radius:4px;padding:36px">
+            <h3 style="font-family:var(--ff-display);font-style:italic;margin-bottom:24px">Send us a message</h3>
+            <div class="form-field"><label>Full name *</label><input type="text" placeholder="Your name"></div>
+            <div class="form-field"><label>Email *</label><input type="email" placeholder="you@email.com"></div>
+            <div class="form-field"><label>Phone</label><input type="tel" placeholder="(702) 000-0000"></div>
+            <div class="form-field"><label>Treatment interested in</label>
+              <select>
+                <option value="">Select a treatment...</option>
+                <option>Botox / Neurotoxins</option>
+                <option>Dermal Fillers</option>
+                <option>Lip Filler</option>
+                <option>Sofwave Non-Surgical Lift</option>
+                <option>XERF Skin Tightening</option>
+                <option>Aerolase Neo Elite</option>
+                <option>HydraFacial</option>
+                <option>Diamond Glow</option>
+                <option>Emsculpt Neo / Emsella</option>
+                <option>Thread Lift</option>
+                <option>Microneedling</option>
+                <option>Membership inquiry</option>
+                <option>Not sure — need a consultation</option>
+              </select>
+            </div>
+            <div class="form-field"><label>Message</label><textarea placeholder="Tell us about your goals, any questions, or preferred appointment times..."></textarea></div>
+            <button class="btn btn-gold" style="width:100%;margin-bottom:12px">Send message</button>
+            <div class="form-sub">🔒 Your information is private and never shared.</div>
+            <div style="background:rgba(185,160,104,0.06);border-radius:3px;padding:14px;margin-top:16px;font-size:0.82rem;color:var(--muted);border:1px solid rgba(185,160,104,0.12)">
+              Prefer to call? <strong style="color:var(--teak)">(702) 625-3838</strong><br>
+              Or text — we answer both.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">Beauty Goals LV</div>
+        <p class="footer-tagline">Las Vegas's premier medical aesthetics spa. Expert injectables, advanced lasers, and personalized care — led by Michelle Tio-Nguyen, FNP-C.</p>
+        <div class="financing-strip">
+          <span class="financing-strip-label">Financing</span>
+          <span class="financing-badge">CareCredit</span>
+          <span class="financing-badge">Patientfi</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Treatments</h5>
+        <a onclick="goto('services')">Botox &amp; Fillers</a>
+        <a onclick="goto('services')">Sofwave Lift</a>
+        <a onclick="goto('services')">XERF Tightening</a>
+        <a onclick="goto('services')">Aerolase Neo</a>
+        <a onclick="goto('services')">HydraFacial</a>
+        <a onclick="goto('services')">Emsculpt Neo</a>
+        <a onclick="goto('services')">Thread Lift</a>
+        <a onclick="goto('services')">All services →</a>
+      </div>
+      <div class="footer-col">
+        <h5>Quick links</h5>
+        <a onclick="goto('about')">About us</a>
+        <a onclick="goto('gallery')">Gallery</a>
+        <a onclick="goto('membership')">Membership</a>
+        <a onclick="goto('promotions')">Promotions</a>
+        <a onclick="goto('contact')">Book now</a>
+        <a onclick="goto('contact')">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Visit us</h5>
+        <address class="footer-address">
+          <p>8961 W. Sahara Ave<br>Suite 106<br>Las Vegas, NV 89117</p>
+          <p>(702) 625-3838</p>
+          <p>beautygoalsLV@gmail.com</p>
+          <p>Mon–Fri: 10am – 6pm<br>Sat: 10am – 4pm<br>Sun: By appointment</p>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Beauty Goals LV. All rights reserved. | Las Vegas, NV</div>
+      <div class="footer-social">
+        <a href="https://instagram.com/beautygoalslv" target="_blank" title="Instagram">IG</a>
+        <a href="https://youtube.com/channel/UCbSrA4tNtZEE52L1KARn5UQ" target="_blank" title="YouTube">YT</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Simple hash router ────────────────────────────────────────
+const pages = ['home','about','services','gallery','membership','promotions','contact'];
+
+function goto(id) {
+  pages.forEach(p => {
+    const el = document.getElementById('page-' + p);
+    if (el) el.classList.toggle('active', p === id);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState(null, '', '#' + id);
+}
+
+// Handle back/forward
+window.addEventListener('popstate', () => {
+  const hash = location.hash.replace('#','') || 'home';
+  if (pages.includes(hash)) goto(hash);
+});
+
+// Handle initial load
+const init = location.hash.replace('#','') || 'home';
+if (pages.includes(init)) goto(init);
+
+// Gallery filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
