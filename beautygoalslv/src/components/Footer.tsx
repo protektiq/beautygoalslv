@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5 className={columnHeadingClassName}>Treatments</h5>
+            <h2 className={columnHeadingClassName}>Treatments</h2>
             {treatmentLinks.map((link) => (
               <Link
                 key={link.label}
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5 className={columnHeadingClassName}>Quick Links</h5>
+            <h2 className={columnHeadingClassName}>Quick Links</h2>
             {quickLinks.map((link) => (
               <Link
                 key={link.label}
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h5 className={columnHeadingClassName}>Visit Us</h5>
+            <h2 className={columnHeadingClassName}>Visit Us</h2>
             <address className="not-italic">
               <p className={columnTextClassName}>
                 8961 W. Sahara Ave

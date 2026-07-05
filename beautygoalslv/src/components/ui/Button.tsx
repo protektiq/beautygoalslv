@@ -20,7 +20,7 @@ const sizeStyles: Record<ButtonSize, string> = {
 };
 
 const baseStyles =
-  "inline-block cursor-pointer rounded-[2px] font-body text-[0.82rem] font-semibold uppercase tracking-[0.07em] transition-all duration-200";
+  "inline-block cursor-pointer rounded-[2px] font-body text-[0.82rem] font-semibold uppercase tracking-[0.07em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teak focus-visible:ring-offset-2";
 
 type ButtonBaseProps = {
   children: ReactNode;

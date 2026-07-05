@@ -269,6 +269,7 @@ const MembershipPage = () => {
 
       <section className="bg-warm-white px-6 py-24">
         <div className="mx-auto max-w-[1200px]">
+          <h2 className="sr-only">Membership tiers</h2>
           <ul className="mb-[60px] grid grid-cols-1 gap-4 min-[601px]:grid-cols-2 min-[901px]:grid-cols-4">
             {MEMBERSHIP_TIERS.map((tier) => (
               <li key={tier.id}>
@@ -277,7 +278,7 @@ const MembershipPage = () => {
             ))}
           </ul>
 
-          <h3 className="mb-6 font-display text-body">Plan comparison</h3>
+          <h2 className="mb-6 font-display text-body">Plan comparison</h2>
 
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] border-collapse text-[0.84rem]">

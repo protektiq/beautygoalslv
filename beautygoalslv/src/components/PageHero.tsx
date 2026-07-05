@@ -26,7 +26,7 @@ const PageHero = ({
           {headline}
         </h1>
 
-        <p className="text-base leading-[1.7] text-white/[0.55]">{subtext}</p>
+        <p className="text-base leading-[1.7] text-white/[0.65]">{subtext}</p>
       </div>
     </section>
   );

@@ -22,6 +22,9 @@ const config: Config = {
         body: "#2D2B27",
         muted: "#6B6860",
       },
+      ringColor: {
+        teak: "#B9A068",
+      },
       fontFamily: {
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "Georgia", "serif"],

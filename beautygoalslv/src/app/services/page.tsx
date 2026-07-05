@@ -152,7 +152,7 @@ type ServiceCardProps = Service;
 const ServiceCard = ({ name, description, price }: ServiceCardProps) => {
   return (
     <article className={serviceCardClassName}>
-      <h4 className="mb-2 font-display text-[1.05rem] text-body">{name}</h4>
+      <h3 className="mb-2 font-display text-[1.05rem] text-body">{name}</h3>
       <p className="mb-3.5 text-[0.83rem] leading-[1.55] text-muted">
         {description}
       </p>
@@ -173,9 +173,9 @@ const ServiceCategorySection = ({
   return (
     <section className="mb-[72px]">
       <div className="mb-8 flex flex-wrap items-baseline gap-5 border-b border-teak/20 pb-4">
-        <span className="inline-block rounded-[2px] border border-teak px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
+        <h2 className="inline-block rounded-[2px] border border-teak px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
           {tag}
-        </span>
+        </h2>
         <p className="text-[0.85rem] text-muted">{description}</p>
       </div>
 
@@ -207,7 +207,7 @@ const ServicesPage = () => {
               <h2 className="mb-1.5 font-display text-[1.3rem] italic text-white">
                 Glow Getter Membership
               </h2>
-              <p className="text-[0.85rem] text-white/[0.55]">
+              <p className="text-[0.85rem] text-white/[0.65]">
                 10% off injectables · 15% off all other services · Credits roll
                 over every month
               </p>

@@ -160,6 +160,7 @@ const ContactPage = () => {
 
             <div
               className="mt-8 flex h-[280px] items-center justify-center rounded-[4px] border border-teak/15 bg-gradient-to-br from-[#1a1a1a] to-[#252015] text-[0.85rem] text-teak/40"
+              role="img"
               aria-label="Map placeholder for 8961 W. Sahara Ave, Las Vegas"
             >
               📍 Map — 8961 W. Sahara Ave, Las Vegas
@@ -182,6 +183,7 @@ const ContactPage = () => {
                   type="text"
                   autoComplete="name"
                   placeholder="Your name"
+                  required
                   className={formInputClassName}
                 />
               </div>
@@ -196,6 +198,7 @@ const ContactPage = () => {
                   type="email"
                   autoComplete="email"
                   placeholder="you@email.com"
+                  required
                   className={formInputClassName}
                 />
               </div>

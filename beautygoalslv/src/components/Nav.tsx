@@ -140,6 +140,7 @@ const mobileServiceLinkClassName =
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
 
   const handleCloseMenu = () => {
     setIsOpen(false);
@@ -147,6 +148,18 @@ const Nav = () => {
 
   const handleToggleMenu = () => {
     setIsOpen((open) => !open);
+  };
+
+  const handleOpenServicesMenu = () => {
+    setServicesMenuOpen(true);
+  };
+
+  const handleCloseServicesMenu = () => {
+    setServicesMenuOpen(false);
+  };
+
+  const handleToggleServicesMenu = () => {
+    setServicesMenuOpen((open) => !open);
   };
 
   return (
@@ -189,13 +202,27 @@ const Nav = () => {
               </Link>
             ))}
 
-            <div className="group relative">
-              <Link href="/services" className={navLinkClassName}>
+            <div
+              className="relative"
+              onMouseEnter={handleOpenServicesMenu}
+              onMouseLeave={handleCloseServicesMenu}
+            >
+              <button
+                type="button"
+                className={navLinkClassName}
+                aria-expanded={servicesMenuOpen}
+                aria-haspopup="menu"
+                aria-controls="services-desktop-menu"
+                onClick={handleToggleServicesMenu}
+              >
                 Services ▾
-              </Link>
+              </button>
 
               <div
-                className="absolute left-[-160px] top-[calc(100%+1px)] hidden w-[600px] grid-cols-2 gap-x-6 rounded-b border border-[rgba(185,160,104,0.2)] border-t-2 border-t-teak bg-near-black p-7 group-hover:grid"
+                id="services-desktop-menu"
+                className={`absolute left-[-160px] top-[calc(100%+1px)] w-[600px] grid-cols-2 gap-x-6 rounded-b border border-[rgba(185,160,104,0.2)] border-t-2 border-t-teak bg-near-black p-7 ${
+                  servicesMenuOpen ? "grid" : "hidden"
+                }`}
                 role="menu"
                 aria-label="Services menu"
               >
@@ -226,6 +253,15 @@ const Nav = () => {
                     ))}
                   </div>
                 ))}
+                <div className="col-span-2 mt-2 border-t border-white/10 pt-4">
+                  <Link
+                    href="/services"
+                    role="menuitem"
+                    className="text-[0.82rem] font-semibold uppercase tracking-[0.06em] text-teak transition-colors hover:text-teak-light"
+                  >
+                    View all services & pricing →
+                  </Link>
+                </div>
               </div>
             </div>
 

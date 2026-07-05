@@ -96,7 +96,8 @@ const TeamCard = ({
     <article className="overflow-hidden rounded-[4px] border border-teak/[0.12] bg-white">
       <div
         className="flex aspect-[3/4] max-h-[320px] items-center justify-center bg-gradient-to-br from-near-black to-[#1f1a14] p-5 text-center font-display text-[1.1rem] italic text-teak/40"
-        aria-hidden="true"
+        role="img"
+        aria-label={`Portrait placeholder for ${imageLabel}`}
       >
         {imageLabel}
       </div>

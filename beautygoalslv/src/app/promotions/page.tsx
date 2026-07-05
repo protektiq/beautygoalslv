@@ -70,7 +70,7 @@ const PromoCard = ({
         <h3 className="mb-1.5 font-display text-[1.3rem] italic text-white">
           {name}
         </h3>
-        <p className="text-[0.85rem] text-white/[0.55]">{discount}</p>
+        <p className="text-[0.85rem] text-white/[0.65]">{discount}</p>
       </div>
 
       <div className="p-6">
@@ -103,6 +103,7 @@ const PromotionsPage = () => {
 
       <section className="bg-warm-white px-6 py-24">
         <div className="mx-auto max-w-[1200px]">
+          <h2 className="sr-only">Current promotions</h2>
           <ul className="mb-[60px] grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6">
             {PROMOTIONS.map((promo) => (
               <li key={promo.id}>

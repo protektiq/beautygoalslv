@@ -44,8 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`}>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Nav />
-        <main className="pt-[72px]">{children}</main>
+        <main id="main-content" className="pt-[72px]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

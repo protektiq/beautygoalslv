@@ -9,8 +9,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [role="tab"]:focus-visible {
+    @apply outline-none ring-2 ring-teak ring-offset-2;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .skip-link {
+    @apply absolute left-[-9999px] top-auto z-[100] h-px w-px overflow-hidden whitespace-nowrap;
+  }
+
+  .skip-link:focus-visible {
+    @apply left-4 top-4 h-auto w-auto overflow-visible rounded-[2px] bg-teak px-4 py-2 font-body text-[0.82rem] font-semibold uppercase tracking-[0.05em] text-black;
   }
 }

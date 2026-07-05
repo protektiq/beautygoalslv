@@ -282,9 +282,9 @@ export default function Home() {
           {SERVICES.map((service) => (
             <li key={service.title}>
               <article className="group flex h-full flex-col bg-white p-8 transition-colors duration-200 hover:bg-warm-white">
-                <h4 className="mb-1.5 font-display text-lg font-medium text-body">
+                <h3 className="mb-1.5 font-display text-lg font-medium text-body">
                   {service.title}
-                </h4>
+                </h3>
 
                 <p className="mb-3.5 flex-1 text-[0.85rem] leading-normal text-muted">
                   {service.description}
@@ -317,7 +317,8 @@ export default function Home() {
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
         <div
           className="mx-auto flex aspect-[3/4] max-h-[520px] w-full max-w-md flex-col items-center justify-center rounded border border-teak/20 bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] text-center md:mx-0 md:max-w-none"
-          aria-hidden="true"
+          role="img"
+          aria-label="Portrait placeholder for Michelle Tio-Nguyen, FNP-C"
         >
           <p className="font-display text-[1.1rem] italic text-teak/50">
             Michelle Tio-Nguyen
@@ -384,10 +385,18 @@ export default function Home() {
             <li key={item.treatment}>
               <article className="overflow-hidden rounded border border-teak/[0.12] bg-black">
                 <div className="flex min-h-[200px] bg-gradient-to-br from-[#111111] to-[#1f1a14]">
-                  <div className="flex min-h-[200px] flex-1 items-center justify-center px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30">
+                  <div
+                    className="flex min-h-[200px] flex-1 items-center justify-center px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30"
+                    role="img"
+                    aria-label={`${item.treatment} — before treatment`}
+                  >
                     Before
                   </div>
-                  <div className="flex min-h-[200px] flex-1 items-center justify-center border-l border-teak/20 px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30">
+                  <div
+                    className="flex min-h-[200px] flex-1 items-center justify-center border-l border-teak/20 px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30"
+                    role="img"
+                    aria-label={`${item.treatment} — after treatment`}
+                  >
                     After
                   </div>
                 </div>
@@ -505,7 +514,7 @@ export default function Home() {
             Let&apos;s start your glow-up.
           </h2>
 
-          <p className="mb-8 leading-[1.7] text-white/55">
+          <p className="mb-8 leading-[1.7] text-white/[0.65]">
             Fill out the form and we&apos;ll be in touch within 24 hours. Prefer
             to call? We&apos;re at 702-625-3838 during business hours.
           </p>
@@ -578,7 +587,7 @@ export default function Home() {
         <form className="w-full" noValidate aria-label="Contact form">
           <div className="mb-5">
             <label htmlFor="contact-name" className={formLabelClassName}>
-              Full name
+              Full name *
             </label>
             <input
               id="contact-name"
@@ -586,13 +595,14 @@ export default function Home() {
               type="text"
               autoComplete="name"
               placeholder="Your name"
+              required
               className={formInputClassName}
             />
           </div>
 
           <div className="mb-5">
             <label htmlFor="contact-email" className={formLabelClassName}>
-              Email
+              Email *
             </label>
             <input
               id="contact-email"
@@ -600,6 +610,7 @@ export default function Home() {
               type="email"
               autoComplete="email"
               placeholder="you@email.com"
+              required
               className={formInputClassName}
             />
           </div>
