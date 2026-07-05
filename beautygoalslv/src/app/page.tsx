@@ -1,6 +1,19 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
+import { cn } from "@/lib/utils";
+
+const formInputClassName =
+  "w-full rounded-[2px] border border-teak/20 bg-white px-4 py-3 font-body text-[0.9rem] text-body transition-colors focus:border-teak focus:outline-none";
+
+const formLabelClassName =
+  "mb-[7px] block text-[0.73rem] font-semibold uppercase tracking-[0.08em] text-muted";
+
+const followButtonClassName =
+  "inline-block cursor-pointer rounded-[2px] border border-teak bg-transparent px-[22px] py-2.5 font-body text-[0.76rem] font-semibold uppercase tracking-[0.07em] text-teak transition-all duration-200 hover:bg-teak hover:text-black";
+
+const financingBadgeClassName =
+  "rounded-[2px] border border-white/10 bg-white/[0.07] px-3 py-1.5 text-[0.75rem] text-white/60";
 
 const HERO_STATS = [
   { value: "13+", label: "Years medical experience" },
@@ -133,6 +146,34 @@ const TESTIMONIALS = [
       "She looks at the patient as a whole person. Takes her time and takes everything into consideration. Both my mom and I are very happy with the results.",
     detail: "Multiple treatments · Verified Google Review",
   },
+] as const;
+
+const INSTAGRAM_TILES = [
+  "Real results & tips",
+  "Before & after",
+  "Treatment reels",
+  "Glow tips",
+  "New services",
+  "Behind the scenes",
+] as const;
+
+const TREATMENT_OPTIONS = [
+  "Botox / Neurotoxins",
+  "Dermal Fillers",
+  "Lip Filler",
+  "Sofwave Non-Surgical Lift",
+  "XERF Skin Tightening",
+  "Aerolase Neo Elite",
+  "HydraFacial",
+  "Diamond Glow",
+  "IPL Photofacial",
+  "Microneedling RF",
+  "Chemical Peels",
+  "Erbium Laser Resurfacing",
+  "Emsculpt Neo / Emsella",
+  "Thread Lift",
+  "Membership inquiry",
+  "Not sure — need a consultation",
 ] as const;
 
 export default function Home() {
@@ -425,6 +466,206 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+
+    <section className="bg-warm-white px-6 py-24">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <SectionEyebrow>@beautygoalslv</SectionEyebrow>
+            <h2 className="font-display text-body">@beautygoalslv</h2>
+          </div>
+          <a
+            href="https://instagram.com/beautygoalslv"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={followButtonClassName}
+          >
+            Follow us
+          </a>
+        </div>
+
+        <ul className="grid grid-cols-3 gap-[3px] md:grid-cols-6">
+          {INSTAGRAM_TILES.map((label) => (
+            <li key={label}>
+              <div
+                className="flex aspect-square cursor-pointer items-center justify-center border border-teak/[0.08] bg-gradient-to-br from-[#1a1a1a] to-[#252015] p-2 transition-opacity duration-200 hover:opacity-80"
+                role="img"
+                aria-label={label}
+              >
+                <span className="text-center text-[0.65rem] text-teak/40">
+                  {label}
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section className="bg-black px-6 py-24">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-20 md:grid-cols-2">
+        <div>
+          <SectionEyebrow className="text-teak">Contact Us</SectionEyebrow>
+
+          <h2 className="mb-5 font-display text-white">
+            Let&apos;s start your glow-up.
+          </h2>
+
+          <p className="mb-8 leading-[1.7] text-white/55">
+            Fill out the form and we&apos;ll be in touch within 24 hours. Prefer
+            to call? We&apos;re at 702-625-3838 during business hours.
+          </p>
+
+          <address className="not-italic">
+            <div className="flex items-start gap-3.5 border-b border-teak/15 py-4 text-[0.9rem] text-white">
+              <span className="mt-px shrink-0 text-[1.2rem]" aria-hidden="true">
+                📍
+              </span>
+              <div>
+                <p className="mb-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
+                  Address
+                </p>
+                <p>
+                  8961 W. Sahara Avenue, Suite 106
+                  <br />
+                  Las Vegas, NV 89117
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5 border-b border-teak/15 py-4 text-[0.9rem] text-white">
+              <span className="mt-px shrink-0 text-[1.2rem]" aria-hidden="true">
+                📞
+              </span>
+              <div>
+                <p className="mb-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
+                  Phone
+                </p>
+                <a
+                  href="tel:7026253838"
+                  className="transition-colors hover:text-teak"
+                >
+                  (702) 625-3838
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5 border-b border-teak/15 py-4 text-[0.9rem] text-white">
+              <span className="mt-px shrink-0 text-[1.2rem]" aria-hidden="true">
+                ✉️
+              </span>
+              <div>
+                <p className="mb-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-teak">
+                  Email
+                </p>
+                <a
+                  href="mailto:beautygoalsLV@gmail.com"
+                  className="transition-colors hover:text-teak"
+                >
+                  beautygoalsLV@gmail.com
+                </a>
+              </div>
+            </div>
+          </address>
+
+          <p className="mt-4 inline-flex items-center gap-1.5 rounded-[2px] border border-teak/20 bg-teak/10 px-3.5 py-2 text-[0.78rem] text-teak">
+            ⏱ We respond within 24 hours
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <span className="shrink-0 text-[0.73rem] uppercase tracking-[0.05em] text-white/40">
+              Financing:
+            </span>
+            <span className={financingBadgeClassName}>CareCredit</span>
+            <span className={financingBadgeClassName}>Patientfi</span>
+          </div>
+        </div>
+
+        <form className="w-full" noValidate aria-label="Contact form">
+          <div className="mb-5">
+            <label htmlFor="contact-name" className={formLabelClassName}>
+              Full name
+            </label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              autoComplete="name"
+              placeholder="Your name"
+              className={formInputClassName}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label htmlFor="contact-email" className={formLabelClassName}>
+              Email
+            </label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder="you@email.com"
+              className={formInputClassName}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label htmlFor="contact-phone" className={formLabelClassName}>
+              Phone
+            </label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              placeholder="(702) 000-0000"
+              className={formInputClassName}
+            />
+          </div>
+
+          <div className="mb-5">
+            <label htmlFor="contact-treatment" className={formLabelClassName}>
+              Treatment interested in
+            </label>
+            <select
+              id="contact-treatment"
+              name="treatment"
+              defaultValue=""
+              className={cn(formInputClassName, "cursor-pointer")}
+            >
+              <option value="">Select a treatment...</option>
+              {TREATMENT_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="mb-5">
+            <label htmlFor="contact-message" className={formLabelClassName}>
+              Message (optional)
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows={5}
+              placeholder="Any questions or goals you'd like to share..."
+              className={cn(formInputClassName, "h-[110px] resize-y")}
+            />
+          </div>
+
+          <Button type="button" className="w-full text-center">
+            Send Message
+          </Button>
+
+          <p className="mt-2.5 text-[0.78rem] text-muted">
+            🔒 Your information is private and secure.
+          </p>
+        </form>
       </div>
     </section>
     </>
