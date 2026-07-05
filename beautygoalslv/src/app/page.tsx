@@ -111,6 +111,30 @@ const BEFORE_AFTER = [
   },
 ] as const;
 
+const TESTIMONIALS = [
+  {
+    initials: "TR",
+    name: "Tasha R.",
+    quote:
+      "She's precise, she listens to what your goals are, she's informative and always has her client's best interest in mind. I can't recommend her enough.",
+    detail: "Botox + Fillers · Verified Google Review",
+  },
+  {
+    initials: "MA",
+    name: "Michelle A.",
+    quote:
+      "She educates you about the treatments and lets you know if you need it or not. It immediately slimmed down my face — something I never thought would happen!",
+    detail: "Botox + Chin Filler · Verified Google Review",
+  },
+  {
+    initials: "KC",
+    name: "K.C.",
+    quote:
+      "She looks at the patient as a whole person. Takes her time and takes everything into consideration. Both my mom and I are very happy with the results.",
+    detail: "Multiple treatments · Verified Google Review",
+  },
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -353,6 +377,54 @@ export default function Home() {
             View full gallery →
           </Button>
         </div>
+      </div>
+    </section>
+
+    <section className="bg-black px-6 py-24">
+      <div className="mx-auto max-w-[1200px]">
+        <SectionEyebrow className="text-teak">Client Reviews</SectionEyebrow>
+
+        <h2 className="mb-12 font-display text-white">
+          What our clients say.
+        </h2>
+
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6">
+          {TESTIMONIALS.map((testimonial) => (
+            <li key={testimonial.name}>
+              <article className="rounded border border-teak/15 bg-teak/[0.06] p-7">
+                <p
+                  className="mb-3 text-base text-teak"
+                  aria-label="5 out of 5 stars"
+                >
+                  ★★★★★
+                </p>
+
+                <blockquote className="mb-5 text-[0.88rem] italic leading-[1.7] text-white/75">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </blockquote>
+
+                <footer className="flex items-center gap-2.5">
+                  <div
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teak/20 text-[0.75rem] font-semibold text-teak"
+                    aria-hidden="true"
+                  >
+                    {testimonial.initials}
+                  </div>
+                  <div>
+                    <cite className="not-italic">
+                      <p className="text-[0.82rem] font-medium text-white">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-[0.72rem] text-white/35">
+                        {testimonial.detail}
+                      </p>
+                    </cite>
+                  </div>
+                </footer>
+              </article>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
     </>
