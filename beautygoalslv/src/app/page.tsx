@@ -44,56 +44,48 @@ const SOCIAL_PROOF = [
 
 const SERVICES = [
   {
-    icon: "💉",
     title: "Botox & Neurotoxins",
     description:
       "Reduce fine lines and wrinkles, slim the jawline, or treat hyperhidrosis.",
     price: "Starting at $450",
   },
   {
-    icon: "✨",
     title: "Dermal Fillers",
     description:
       "Restore volume, enhance contour, and achieve facial balance.",
     price: "Starting at $550",
   },
   {
-    icon: "🌊",
     title: "Sofwave Non-Surgical Lift",
     description:
       "FDA-cleared ultrasound that lifts skin with zero downtime. One treatment.",
     price: "Consultation required",
   },
   {
-    icon: "⚡",
     title: "XERF Skin Tightening",
     description:
       "Dual-frequency radiofrequency for firmer, tighter skin. No needles.",
     price: "New — ask for pricing",
   },
   {
-    icon: "💎",
     title: "HydraFacial & Diamond Glow",
     description:
       "Medical-grade resurfacing, extraction, and deep hydration.",
     price: "Starting at $205",
   },
   {
-    icon: "🔬",
     title: "Aerolase Neo Elite",
     description:
       "650-microsecond laser treats 30+ conditions, safe for all skin types.",
     price: "Consultation required",
   },
   {
-    icon: "💪",
     title: "Emsculpt Neo",
     description:
       "Build muscle and eliminate fat simultaneously. 30% fat reduction on average.",
     price: "Packages available",
   },
   {
-    icon: "🧵",
     title: "Thread Lift",
     description:
       "Minimally invasive PDO threads for dramatic lifting without surgery.",
@@ -283,13 +275,6 @@ export default function Home() {
           {SERVICES.map((service) => (
             <li key={service.title}>
               <article className="group flex h-full flex-col bg-white p-8 transition-colors duration-200 hover:bg-warm-white">
-                <div
-                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-teak/[0.12] text-[1.2rem]"
-                  aria-hidden="true"
-                >
-                  {service.icon}
-                </div>
-
                 <h4 className="mb-1.5 font-display text-lg font-medium text-body">
                   {service.title}
                 </h4>
