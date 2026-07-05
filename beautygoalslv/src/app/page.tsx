@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 
@@ -26,6 +27,65 @@ const SOCIAL_PROOF = [
   { value: "13 yrs", label: "Medical expertise" },
   { value: "CareCredit", label: "Financing available" },
   { value: "Patientfi", label: "Payment plans" },
+] as const;
+
+const SERVICES = [
+  {
+    icon: "💉",
+    title: "Botox & Neurotoxins",
+    description:
+      "Reduce fine lines and wrinkles, slim the jawline, or treat hyperhidrosis.",
+    price: "Starting at $450",
+  },
+  {
+    icon: "✨",
+    title: "Dermal Fillers",
+    description:
+      "Restore volume, enhance contour, and achieve facial balance.",
+    price: "Starting at $550",
+  },
+  {
+    icon: "🌊",
+    title: "Sofwave Non-Surgical Lift",
+    description:
+      "FDA-cleared ultrasound that lifts skin with zero downtime. One treatment.",
+    price: "Consultation required",
+  },
+  {
+    icon: "⚡",
+    title: "XERF Skin Tightening",
+    description:
+      "Dual-frequency radiofrequency for firmer, tighter skin. No needles.",
+    price: "New — ask for pricing",
+  },
+  {
+    icon: "💎",
+    title: "HydraFacial & Diamond Glow",
+    description:
+      "Medical-grade resurfacing, extraction, and deep hydration.",
+    price: "Starting at $205",
+  },
+  {
+    icon: "🔬",
+    title: "Aerolase Neo Elite",
+    description:
+      "650-microsecond laser treats 30+ conditions, safe for all skin types.",
+    price: "Consultation required",
+  },
+  {
+    icon: "💪",
+    title: "Emsculpt Neo",
+    description:
+      "Build muscle and eliminate fat simultaneously. 30% fat reduction on average.",
+    price: "Packages available",
+  },
+  {
+    icon: "🧵",
+    title: "Thread Lift",
+    description:
+      "Minimally invasive PDO threads for dramatic lifting without surgery.",
+    price: "Consultation required",
+  },
 ] as const;
 
 export default function Home() {
@@ -116,6 +176,61 @@ export default function Home() {
           </li>
         ))}
       </ul>
+    </section>
+
+    <section className="bg-warm-white px-6 py-24">
+      <div className="mx-auto max-w-[1200px]">
+        <SectionEyebrow>Our Treatments</SectionEyebrow>
+
+        <h2 className="mb-3 font-display text-body">
+          Everything your skin needs, under one roof.
+        </h2>
+
+        <p className="mb-12 max-w-[640px] text-[1.1rem] leading-relaxed text-muted">
+          From a first-time HydraFacial to a full-face Sofwave lift, every
+          treatment is tailored to your goals by our licensed team.
+        </p>
+
+        <ul className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-px border border-teak/10 bg-teak/10">
+          {SERVICES.map((service) => (
+            <li key={service.title}>
+              <article className="group flex h-full flex-col bg-white p-8 transition-colors duration-200 hover:bg-warm-white">
+                <div
+                  className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-teak/[0.12] text-[1.2rem]"
+                  aria-hidden="true"
+                >
+                  {service.icon}
+                </div>
+
+                <h4 className="mb-1.5 font-display text-lg font-medium text-body">
+                  {service.title}
+                </h4>
+
+                <p className="mb-3.5 flex-1 text-[0.85rem] leading-normal text-muted">
+                  {service.description}
+                </p>
+
+                <p className="text-[0.78rem] font-semibold tracking-[0.04em] text-teak">
+                  {service.price}
+                </p>
+
+                <Link
+                  href="/services"
+                  className="mt-2 inline-block text-[0.75rem] font-semibold uppercase tracking-[0.07em] text-muted transition-colors duration-200 group-hover:text-teak"
+                >
+                  View treatment →
+                </Link>
+              </article>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-10 text-center">
+          <Button href="/services" variant="outline">
+            View all services & pricing
+          </Button>
+        </div>
+      </div>
     </section>
     </>
   );
