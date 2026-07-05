@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body>
         <Nav />
         <main className="pt-[72px]">{children}</main>
+        <Footer />
       </body>
     </html>
   );
