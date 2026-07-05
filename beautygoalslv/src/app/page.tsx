@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Med Spa Las Vegas | Beauty Goals LV — Botox, Fillers, Facials & More",
+  description:
+    "Beauty Goals LV is Las Vegas's premier med spa. Expert Botox, fillers, Sofwave, HydraFacial, Emsculpt, and more — led by Michelle Tio-Nguyen, FNP-C.",
+};
 
 const formInputClassName =
   "w-full rounded-[2px] border border-teak/20 bg-white px-4 py-3 font-body text-[0.9rem] text-body transition-colors focus:border-teak focus:outline-none";

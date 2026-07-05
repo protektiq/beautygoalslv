@@ -20,9 +20,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Beauty Goals LV — Med Spa Las Vegas",
+  metadataBase: new URL("https://beautygoalslv.com"),
+  title:
+    "Med Spa Las Vegas | Beauty Goals LV — Botox, Fillers, Facials & More",
   description:
-    "Beauty Goals LV is the Best Med Spa in Las Vegas. Offering Botox, Fillers, medical grade skin care needs, and more.",
+    "Beauty Goals LV is Las Vegas's premier med spa. Expert Botox, fillers, Sofwave, HydraFacial, Emsculpt, and more — led by Michelle Tio-Nguyen, FNP-C.",
+  openGraph: {
+    siteName: "Beauty Goals LV",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

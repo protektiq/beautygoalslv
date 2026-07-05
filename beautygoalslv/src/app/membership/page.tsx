@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 import BookingStrip from "@/components/ui/BookingStrip";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Membership Plans | Beauty Goals LV Las Vegas",
+  description:
+    "Join the Beauty Goals LV Glow Getter program. Four membership tiers from $99/mo with 10-15% savings on all treatments. Credits always roll over.",
+};
 
 type MembershipTier = {
   id: string;

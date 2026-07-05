@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
+
+export const metadata: Metadata = {
+  title: "Current Promotions | Beauty Goals LV Las Vegas",
+  description:
+    "Current promotions and special offers at Beauty Goals LV. Intro pricing on XERF, new client specials, and bundle savings.",
+};
 
 type Promotion = {
   id: string;

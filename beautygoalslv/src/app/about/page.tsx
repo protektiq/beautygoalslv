@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import BookingStrip from "@/components/ui/BookingStrip";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
+
+export const metadata: Metadata = {
+  title: "About Us Las Vegas | Beauty Goals LV — Michelle Tio-Nguyen, FNP-C",
+  description:
+    "Meet the Beauty Goals LV team: Michelle Tio-Nguyen (FNP-C), Jennifer Guizar, and Zayna Rodriguez. 13+ years of aesthetic expertise in Las Vegas.",
+};
 
 type TeamMember = {
   imageLabel: string;

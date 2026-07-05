@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Button from "@/components/ui/Button";
 import BookingStrip from "@/components/ui/BookingStrip";
+
+export const metadata: Metadata = {
+  title: "Med Spa Services Las Vegas | Beauty Goals LV",
+  description:
+    "15+ advanced treatments: Botox, fillers, Sofwave, XERF, Aerolase, HydraFacial, Emsculpt Neo, thread lift, and more. Starting at $99/mo membership.",
+};
 
 type Service = {
   name: string;
