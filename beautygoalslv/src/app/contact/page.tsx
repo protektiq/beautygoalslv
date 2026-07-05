@@ -158,6 +158,7 @@ const ContactPage = () => {
               ⏱ We respond within 24 hours
             </p>
 
+            {/* TODO: Replace with <Image> from next/image when real photos are available */}
             <div
               className="mt-8 flex h-[280px] items-center justify-center rounded-[4px] border border-teak/15 bg-gradient-to-br from-[#1a1a1a] to-[#252015] text-[0.85rem] text-teak/40"
               role="img"

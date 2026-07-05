@@ -94,15 +94,17 @@ const GalleryCard = ({ treatment, meta }: GalleryCardProps) => {
   return (
     <article className="overflow-hidden rounded-[4px] border border-teak/10 bg-black transition-[border-color] duration-200 hover:border-teak">
       <div className="flex">
-      <div
-        className="flex min-h-[160px] flex-1 flex-col items-center justify-center bg-gradient-to-br from-[#111] to-[#1a1508] px-2.5 py-5"
-        role="img"
-        aria-label={`${treatment} — before treatment`}
-      >
+        {/* TODO: Replace with <Image> from next/image when real photos are available */}
+        <div
+          className="flex min-h-[160px] flex-1 flex-col items-center justify-center bg-gradient-to-br from-[#111] to-[#1a1508] px-2.5 py-5"
+          role="img"
+          aria-label={`${treatment} — before treatment`}
+        >
           <span className="mb-1.5 text-[0.62rem] uppercase tracking-[0.12em] text-white/30">
             Before
           </span>
         </div>
+        {/* TODO: Replace with <Image> from next/image when real photos are available */}
         <div
           className="flex min-h-[160px] flex-1 flex-col items-center justify-center border-l border-teak/15 bg-gradient-to-br from-[#0d1a0d] to-[#111] px-2.5 py-5"
           role="img"

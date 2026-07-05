@@ -38,7 +38,8 @@ const SERVICE_CATEGORIES: readonly ServiceCategory[] = [
         name: "Dermal Fillers",
         description:
           "Add volume, smooth deep lines, and create facial balance with hyaluronic acid filler. Areas include cheeks, chin, jaw, under-eye, nose, and laugh lines.",
-        price: "From $550 · Facial balancing from $1,100",
+        price:
+          "From $550 · Cheeks from $600 · Jaw from $1,100 · Chin from $600 · Facial balancing from $1,100",
       },
       {
         name: "Lip Filler",
@@ -69,7 +70,8 @@ const SERVICE_CATEGORIES: readonly ServiceCategory[] = [
         name: "Microneedling",
         description:
           "FDA-cleared collagen induction therapy. Add PRP, PRF, Exosome, or Rejuran for amplified results. Treats scars, pores, texture, and wrinkles.",
-        price: "From $375 · With RF from $650",
+        price:
+          "From $375 · With RF from $650 · With PRP $625 · With Exosome $675",
       },
       {
         name: "IPL Photofacial",

@@ -315,6 +315,7 @@ export default function Home() {
 
     <section className="section-padding bg-white">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
+        {/* TODO: Replace with <Image> from next/image when real photos are available */}
         <div
           className="mx-auto flex aspect-[3/4] max-h-[520px] w-full max-w-md flex-col items-center justify-center rounded border border-teak/20 bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] text-center md:mx-0 md:max-w-none"
           role="img"
@@ -385,6 +386,7 @@ export default function Home() {
             <li key={item.treatment}>
               <article className="overflow-hidden rounded border border-teak/[0.12] bg-black">
                 <div className="flex min-h-[200px] bg-gradient-to-br from-[#111111] to-[#1f1a14]">
+                  {/* TODO: Replace with <Image> from next/image when real photos are available */}
                   <div
                     className="flex min-h-[200px] flex-1 items-center justify-center px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30"
                     role="img"
@@ -392,6 +394,7 @@ export default function Home() {
                   >
                     Before
                   </div>
+                  {/* TODO: Replace with <Image> from next/image when real photos are available */}
                   <div
                     className="flex min-h-[200px] flex-1 items-center justify-center border-l border-teak/20 px-2 py-[60px] text-center text-[0.65rem] uppercase tracking-[0.1em] text-white/30"
                     role="img"
@@ -490,6 +493,7 @@ export default function Home() {
         <ul className="grid grid-cols-3 gap-[3px] md:grid-cols-6">
           {INSTAGRAM_TILES.map((label) => (
             <li key={label}>
+              {/* TODO: Replace with <Image> from next/image when real photos are available */}
               <div
                 className="flex aspect-square cursor-pointer items-center justify-center border border-teak/[0.08] bg-gradient-to-br from-[#1a1a1a] to-[#252015] p-2 transition-opacity duration-200 hover:opacity-80"
                 role="img"

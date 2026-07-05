@@ -94,6 +94,7 @@ const TeamCard = ({
 }: TeamCardProps) => {
   return (
     <article className="overflow-hidden rounded-[4px] border border-teak/[0.12] bg-white">
+      {/* TODO: Replace with <Image> from next/image when real photos are available */}
       <div
         className="flex aspect-[3/4] max-h-[320px] items-center justify-center bg-gradient-to-br from-near-black to-[#1f1a14] p-5 text-center font-display text-[1.1rem] italic text-teak/40"
         role="img"
