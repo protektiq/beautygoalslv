@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import HeroVideoBackground from "@/components/HeroVideoBackground";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import Tick from "@/components/ui/Tick";
 import { cn } from "@/lib/utils";
@@ -25,8 +26,8 @@ const financingBadgeClassName =
   "rounded-[2px] border border-warm-white/10 bg-warm-white/[0.07] px-3 py-1.5 text-[0.75rem] text-warm-white/60";
 
 const HERO_MILESTONES = [
-  { value: "13+", label: "years in medicine" },
-  { value: "10+", label: "years focused on aesthetics" },
+  { value: "15+", label: "years in medicine" },
+  { value: "13+", label: "years focused on aesthetics" },
   { value: "15+", label: "treatments, one coordinated plan" },
   { value: "8K", label: "Instagram followers watching the results" },
 ] as const;
@@ -193,8 +194,10 @@ const TREATMENT_OPTIONS = [
 export default function Home() {
   return (
     <>
-      <section className="overflow-x-hidden bg-ink">
-        <div className="mx-auto grid min-h-[calc(100vh-72px)] max-w-[1200px] grid-cols-1 items-center gap-10 px-4 py-12 md:grid-cols-2 md:gap-[60px] md:px-6 md:py-20">
+      <section className="relative overflow-x-hidden bg-ink">
+        <HeroVideoBackground videoId="BM0dY2-kPl4" />
+
+        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-72px)] max-w-[1200px] grid-cols-1 items-center gap-10 px-4 py-12 md:grid-cols-2 md:gap-[60px] md:px-6 md:py-20">
           <div className="text-center md:text-left">
             <SectionEyebrow className="text-teak">
               Las Vegas Premier Med Spa
@@ -377,17 +380,14 @@ export default function Home() {
 
       <section className="section-padding bg-white">
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
-          {/* TODO: Replace with <Image> from next/image when real photos are available */}
-          <div
-            className="mx-auto flex aspect-[3/4] max-h-[520px] w-full max-w-md flex-col items-center justify-center rounded border border-teak/20 bg-gradient-to-br from-ink to-[#2a2520] text-center md:mx-0 md:max-w-none"
-            role="img"
-            aria-label="Portrait placeholder for Michelle Tio-Nguyen, FNP-C"
-          >
-            <p className="font-display text-[1.1rem] italic text-teak/50">
-              Michelle Tio-Nguyen
-              <br />
-              FNP-C
-            </p>
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded border border-teak/20 md:mx-0 md:max-w-none">
+            <Image
+              src="/images/team/michelle-tio-nguyen.jpeg"
+              alt="Michelle Tio-Nguyen, FNP-C"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
           </div>
 
           <div>
@@ -398,8 +398,8 @@ export default function Home() {
             </h2>
 
             <p className="mb-7 text-muted">
-              Michelle Tio-Nguyen, FNP-C brings 13 years of medical expertise
-              and a decade of aesthetic mastery to every appointment. Her
+              Michelle Tio-Nguyen, FNP-C brings 15 years of medical expertise
+              and 13 years of aesthetic mastery to every appointment. Her
               approach: listen first, treat second, always preserving what
               makes you, you.
             </p>
