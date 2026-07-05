@@ -14,9 +14,9 @@ const themeStyles: Record<
   { label: string; badge: string }
 > = {
   dark: {
-    label: "shrink-0 text-[0.73rem] uppercase tracking-[0.05em] text-white/40",
+    label: "shrink-0 text-[0.73rem] uppercase tracking-[0.05em] text-warm-white/40",
     badge:
-      "rounded-[2px] border border-white/10 bg-white/[0.07] px-3 py-1.5 text-[0.75rem] text-white/60",
+      "rounded-[2px] border border-warm-white/10 bg-warm-white/[0.07] px-3 py-1.5 text-[0.75rem] text-warm-white/60",
   },
   light: {
     label: "shrink-0 text-[0.73rem] uppercase tracking-[0.05em] text-muted",

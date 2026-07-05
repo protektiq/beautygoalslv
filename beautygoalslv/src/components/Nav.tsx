@@ -130,13 +130,13 @@ const navLinks = [
 ] as const;
 
 const navLinkClassName =
-  "px-3 py-2 font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-white/75 transition-colors hover:text-teak";
+  "px-3 py-2 font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-warm-white/75 transition-colors hover:text-teak";
 
 const mobileLinkClassName =
-  "block py-3 font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-white/75 transition-colors hover:text-teak";
+  "block py-3 font-body text-[0.82rem] font-medium uppercase tracking-[0.06em] text-warm-white/75 transition-colors hover:text-teak";
 
 const mobileServiceLinkClassName =
-  "block py-2 pl-4 font-body text-[0.82rem] normal-case tracking-normal text-white/60 transition-colors hover:text-teak";
+  "block py-2 pl-4 font-body text-[0.82rem] normal-case tracking-normal text-warm-white/60 transition-colors hover:text-teak";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -166,20 +166,22 @@ const Nav = () => {
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav
         aria-label="Main navigation"
-        className="flex h-[72px] items-center border-b border-[rgba(185,160,104,0.2)] bg-black"
+        className="flex h-[72px] items-center border-b border-[rgba(185,160,104,0.2)] bg-ink"
       >
         <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 md:px-6">
           <Link
             href="/"
-            className="font-display text-[clamp(1.2rem,4vw,1.45rem)] italic tracking-[0.01em] text-teak"
+            className="font-display text-[clamp(1.2rem,4vw,1.45rem)] tracking-[0.01em] text-warm-white"
             onClick={handleCloseMenu}
           >
-            Beauty Goals LV
+            Beauty{" "}
+            <span className="italic text-teak">Goals</span>{" "}
+            LV
           </Link>
 
           <button
             type="button"
-            className="p-2 text-white min-[901px]:hidden"
+            className="p-2 text-warm-white min-[901px]:hidden"
             onClick={handleToggleMenu}
             aria-expanded={isOpen}
             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -241,10 +243,10 @@ const Nav = () => {
                             key={item.name}
                             href={item.href}
                             role="menuitem"
-                            className="block border-b border-white/5 py-[7px] text-[0.82rem] normal-case tracking-normal text-white/80 transition-colors hover:text-teak"
+                            className="block border-b border-warm-white/5 py-[7px] text-[0.82rem] normal-case tracking-normal text-warm-white/80 transition-colors hover:text-teak"
                           >
                             {item.name}
-                            <span className="mt-px block text-[0.7rem] text-white/40">
+                            <span className="mt-px block text-[0.7rem] text-warm-white/40">
                               {item.sub}
                             </span>
                           </Link>
@@ -253,7 +255,7 @@ const Nav = () => {
                     ))}
                   </div>
                 ))}
-                <div className="col-span-2 mt-2 border-t border-white/10 pt-4">
+                <div className="col-span-2 mt-2 border-t border-warm-white/10 pt-4">
                   <Link
                     href="/services"
                     role="menuitem"
@@ -277,7 +279,7 @@ const Nav = () => {
 
             <Link
               href="/contact"
-              className="rounded-[2px] bg-teak px-5 py-[9px] font-body text-[0.82rem] font-semibold uppercase tracking-[0.05em] text-black transition-colors hover:bg-teak-light"
+              className="rounded-[2px] bg-teak px-5 py-[9px] font-body text-[0.82rem] font-semibold uppercase tracking-[0.05em] text-ink transition-colors hover:bg-teak-light"
             >
               Book Now
             </Link>
@@ -286,7 +288,7 @@ const Nav = () => {
       </nav>
 
       <div
-        className={`overflow-x-hidden overflow-y-auto border-b border-[rgba(185,160,104,0.2)] bg-black transition-[max-height] duration-300 ease-in-out min-[901px]:hidden ${
+        className={`overflow-x-hidden overflow-y-auto border-b border-[rgba(185,160,104,0.2)] bg-ink transition-[max-height] duration-300 ease-in-out min-[901px]:hidden ${
           isOpen ? "max-h-[calc(100vh-72px)]" : "max-h-0"
         }`}
         aria-hidden={!isOpen}
@@ -339,7 +341,7 @@ const Nav = () => {
 
             <Link
               href="/contact"
-              className="mt-4 block w-full rounded-[2px] bg-teak py-[9px] text-center font-body text-[0.82rem] font-semibold uppercase tracking-[0.05em] text-black transition-colors hover:bg-teak-light"
+              className="mt-4 block w-full rounded-[2px] bg-teak py-[9px] text-center font-body text-[0.82rem] font-semibold uppercase tracking-[0.05em] text-ink transition-colors hover:bg-teak-light"
               onClick={handleCloseMenu}
             >
               Book Now

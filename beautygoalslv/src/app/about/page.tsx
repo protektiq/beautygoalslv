@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import BookingStrip from "@/components/ui/BookingStrip";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 
 export const metadata: Metadata = {
-  title: "About Us Las Vegas | Beauty Goals LV — Michelle Tio-Nguyen, FNP-C",
+  title: "About Us Las Vegas | Beauty Goals LV: Michelle Tio-Nguyen, FNP-C",
   description:
-    "Meet the Beauty Goals LV team: Michelle Tio-Nguyen (FNP-C), Jennifer Guizar, and Zayna Rodriguez. 13+ years of aesthetic expertise in Las Vegas.",
+    "Meet the Beauty Goals LV team: Michelle Tio-Nguyen (FNP-C), Mary Uosef, and Zayna Rodriguez. 13+ years of aesthetic expertise in Las Vegas.",
 };
 
 type TeamMember = {
-  imageLabel: string;
+  imageSrc: string;
   name: string;
   title: string;
-  bio: string;
-  certifications: readonly string[];
+  bio?: string;
+  tags?: readonly string[];
 };
 
 type PhilosophyItem = {
@@ -24,44 +25,41 @@ type PhilosophyItem = {
 
 const TEAM_MEMBERS: readonly TeamMember[] = [
   {
-    imageLabel: "Michelle Tio-Nguyen, FNP-C",
+    imageSrc: "/images/team/michelle-tio-nguyen.jpeg",
     name: "Michelle Tio-Nguyen",
-    title: "FNP-C · CEO & Master Injector",
-    bio: "With 13 years in medicine and 10 years in aesthetic practice, Michelle specializes in facial balancing, full-face rejuvenation, and natural results. She is a master injector of Botulinum Toxin, Dermal Filler, and PDO threads, and an expert in cosmetic lasers. She regularly attends advanced training in Regenerative Aesthetics and Anti-Aging Procedures.",
-    certifications: [
-      "FNP-C Board Certified",
+    title: "FNP-C · CEO of Beauty Goals LV",
+    bio: "With over 15 years in the medical field and 13 years in the cosmetic and aesthetics industry, Michelle specializes in facial balancing, full-face rejuvenation, and natural results. She is a master injector of Botulinum Toxin, Dermal Filler, and PDO threads, and an expert in cosmetic lasers. She regularly attends industry conferences and trainings in Regenerative Aesthetics, Advanced Anti-Aging Procedures, and Medical-Grade Skincare.",
+    tags: [
       "Master Injector",
       "PDO Threads",
-      "Sofwave Certified",
-      "Aerolase Trained",
+      "Cosmetic Lasers",
       "Regenerative Aesthetics",
     ],
   },
   {
-    imageLabel: "Jennifer Guizar",
-    name: "Jennifer Guizar",
-    title: "Advanced Medical Aesthetician",
-    bio: "Jennifer brings passion and precision to every treatment. Certified in HydraFacial, Diamond Glow, Microneedling RF, Dermaplaning, Erbium Laser, PRX Peel, and laser hair removal, she creates fully customized skincare plans for each client's unique needs and skin type.",
-    certifications: [
-      "HydraFacial Certified",
-      "Diamond Glow",
-      "Microneedling RF",
-      "Erbium Laser",
-      "PRX Peel",
-      "Laser Hair Removal",
-    ],
+    imageSrc: "/images/team/mary-uosef.jpeg",
+    name: "Mary Uosef",
+    title: "Advanced Aesthetician",
+    bio: "Mary is an Advanced Aesthetician with eight years of experience helping clients achieve healthy, confident skin through personalized, results-driven care. She combines advanced clinical knowledge with a compassionate, client-focused approach to create customized treatment plans and medical-grade skincare regimens tailored to each client's unique needs and goals.",
+    tags: ["8 Years Experience", "Medical-Grade Skincare"],
   },
   {
-    imageLabel: "Zayna Rodriguez",
+    imageSrc: "/images/team/zayna-rodriguez.png",
     name: "Zayna Rodriguez",
     title: "Advanced Medical Aesthetician",
-    bio: "Born and raised in Oahu, HI, Zayna brings warmth and meticulous skill to every appointment. She specializes in HydraFacials, laser treatments, and microneedling, and is known for building lasting relationships with her clients and crafting experiences tailored to each person's journey.",
-    certifications: [
-      "HydraFacial Trained",
-      "Laser Treatments",
-      "Microneedling",
-      "Chemical Peels",
-    ],
+    bio: "Born and raised in Oahu, HI, Zayna moved to Las Vegas in 2017. With 5 years of experience as an aesthetician and a warm, bubbly personality, she brings a meticulous work ethic to every appointment, specializing in HydraFacials, laser treatments, and microneedling for each client's unique journey.",
+    tags: ["HydraFacials", "Laser Treatments", "Microneedling"],
+  },
+  {
+    imageSrc: "/images/team/sasha-rueda.jpeg",
+    name: "Sasha Rueda",
+    title: "Client Care Manager",
+    bio: "As Client Care Manager, Sasha is passionate about creating exceptional client experiences rooted in genuine care, connection, and trust. Whether coordinating appointments, answering questions, or serving as a trusted point of contact, she strives to make every interaction uplifting, seamless, and personal.",
+  },
+  {
+    imageSrc: "/images/team/jennifer-lunkwitz.jpg",
+    name: "Jennifer Lunkwitz",
+    title: "Advanced Medical Aesthetician",
   },
 ] as const;
 
@@ -69,12 +67,12 @@ const PHILOSOPHY_ITEMS: readonly PhilosophyItem[] = [
   {
     title: "Personalized above all",
     description:
-      "No two faces are the same. Every plan begins with a thorough consultation where we listen — really listen — to your concerns, goals, and lifestyle before recommending a single treatment.",
+      "No two faces are the same. Every plan begins with a thorough consultation where we listen, really listen, to your concerns, goals, and lifestyle before recommending a single treatment.",
   },
   {
     title: "Natural results, always",
     description:
-      "We believe in enhancing what you have, not changing who you are. Our goal is results so natural that people ask if you've been on vacation — not if you've had work done.",
+      "We believe in enhancing what you have, not changing who you are. Our goal is results so natural that people ask if you've been on vacation, not if you've had work done.",
   },
   {
     title: "Education first",
@@ -85,22 +83,17 @@ const PHILOSOPHY_ITEMS: readonly PhilosophyItem[] = [
 
 type TeamCardProps = TeamMember;
 
-const TeamCard = ({
-  imageLabel,
-  name,
-  title,
-  bio,
-  certifications,
-}: TeamCardProps) => {
+const TeamCard = ({ imageSrc, name, title, bio, tags }: TeamCardProps) => {
   return (
     <article className="overflow-hidden rounded-[4px] border border-teak/[0.12] bg-white">
-      {/* TODO: Replace with <Image> from next/image when real photos are available */}
-      <div
-        className="flex aspect-[3/4] max-h-[320px] items-center justify-center bg-gradient-to-br from-near-black to-[#1f1a14] p-5 text-center font-display text-[1.1rem] italic text-teak/40"
-        role="img"
-        aria-label={`Portrait placeholder for ${imageLabel}`}
-      >
-        {imageLabel}
+      <div className="relative aspect-[3/4] max-h-[320px] overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={`Portrait of ${name}`}
+          fill
+          sizes="(min-width: 901px) 33vw, (min-width: 601px) 50vw, 100vw"
+          className="object-cover"
+        />
       </div>
 
       <div className="p-6">
@@ -110,17 +103,23 @@ const TeamCard = ({
         <p className="mb-3.5 text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-teak">
           {title}
         </p>
-        <p className="mb-4 text-[0.85rem] leading-[1.65] text-muted">{bio}</p>
-        <ul className="flex flex-wrap gap-1.5">
-          {certifications.map((cert) => (
-            <li
-              key={cert}
-              className="rounded-[2px] border border-teak/25 px-[9px] py-[3px] text-[0.68rem] tracking-[0.04em] text-teak"
-            >
-              {cert}
-            </li>
-          ))}
-        </ul>
+        {bio && (
+          <p className="mb-4 text-[0.85rem] leading-[1.65] text-muted">
+            {bio}
+          </p>
+        )}
+        {tags && tags.length > 0 && (
+          <ul className="flex flex-wrap gap-1.5">
+            {tags.map((tag) => (
+              <li
+                key={tag}
+                className="rounded-[2px] border border-teak/25 px-[9px] py-[3px] text-[0.68rem] tracking-[0.04em] text-teak"
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </article>
   );
@@ -133,7 +132,7 @@ const AboutPage = () => {
         breadcrumb="Home"
         breadcrumbHighlight="/ About Us"
         headline="Meet the team behind your glow."
-        subtext="Three licensed professionals, one shared goal — helping you look and feel like the best version of yourself."
+        subtext="A team of dedicated professionals, one shared goal: helping you look and feel like the best version of yourself."
       />
 
       <section className="section-padding bg-warm-white">
@@ -143,7 +142,7 @@ const AboutPage = () => {
             Expert hands. Genuine care.
           </h2>
 
-          <ul className="grid grid-cols-1 gap-10 min-[601px]:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-10 min-[601px]:grid-cols-2 min-[901px]:grid-cols-3">
             {TEAM_MEMBERS.map((member) => (
               <li key={member.name}>
                 <TeamCard {...member} />
@@ -157,15 +156,12 @@ const AboutPage = () => {
         <div className="mx-auto max-w-[1200px]">
           <SectionEyebrow>Our Philosophy</SectionEyebrow>
           <h2 className="h2-section text-body">
-            Beauty should feel like you — just better.
+            Beauty should feel like you. Just better.
           </h2>
 
           <ul className="mt-10 grid grid-cols-1 gap-10 min-[601px]:mt-[60px] min-[601px]:grid-cols-3">
             {PHILOSOPHY_ITEMS.map((item) => (
-              <li
-                key={item.title}
-                className="border-t-2 border-teak p-8"
-              >
+              <li key={item.title} className="border-t-2 border-teak p-8">
                 <h3 className="mb-3 font-display text-[1.15rem] text-body">
                   {item.title}
                 </h3>
@@ -180,7 +176,7 @@ const AboutPage = () => {
 
       <BookingStrip
         headline="Ready to meet the team?"
-        subtext="Complimentary consultations with Michelle, Jennifer, or Zayna."
+        subtext="Complimentary consultations with Michelle, Mary, or Zayna."
       />
     </>
   );

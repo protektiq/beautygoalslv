@@ -25,7 +25,7 @@ const SERVICE_CATEGORIES: readonly ServiceCategory[] = [
   {
     tag: "Injectables",
     description:
-      "Neurotoxins & hyaluronic acid fillers — performed by Michelle Tio-Nguyen, FNP-C",
+      "Neurotoxins & hyaluronic acid fillers, performed by Michelle Tio-Nguyen, FNP-C",
     services: [
       {
         name: "Botox / Dysport / Xeomin / Daxxify",
@@ -108,7 +108,7 @@ const SERVICE_CATEGORIES: readonly ServiceCategory[] = [
         name: "XERF Skin Tightening",
         description:
           "Advanced dual-frequency radiofrequency tightens tissue, improves tone, and stimulates collagen remodeling. No needles, no downtime. 2–3 treatments recommended per year.",
-        price: "Intro pricing — contact us",
+        price: "Intro pricing: contact us",
       },
       {
         name: "Aerolase Neo Elite",
@@ -132,13 +132,13 @@ const SERVICE_CATEGORIES: readonly ServiceCategory[] = [
         name: "Emsculpt Neo",
         description:
           "The only treatment that simultaneously eliminates fat AND builds muscle. 30-minute sessions deliver 30% fat reduction and 25% muscle increase on average. Certified by BTL.",
-        price: "Packages available — consultation required",
+        price: "Packages available, consultation required",
       },
       {
         name: "Emsella Pelvic Floor",
         description:
           "FDA-cleared electromagnetic treatment strengthens the pelvic floor to improve urinary incontinence and sexual wellness. Sit fully clothed for 28 minutes.",
-        price: "Packages available — consultation required",
+        price: "Packages available, consultation required",
       },
     ],
   },
@@ -204,12 +204,12 @@ const ServicesPage = () => {
 
       <section className="section-padding bg-warm-white">
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-10 flex flex-col items-start justify-between gap-6 rounded-[4px] border border-teak/25 bg-black px-4 py-6 md:mb-[60px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-8">
+          <div className="mb-10 flex flex-col items-start justify-between gap-6 rounded-[4px] border border-teak/25 bg-ink px-4 py-6 md:mb-[60px] md:flex-row md:items-center md:gap-6 md:px-10 md:py-8">
             <div>
-              <h2 className="mb-1.5 font-display text-[clamp(1.1rem,3vw,1.3rem)] italic text-white">
+              <h2 className="mb-1.5 font-display text-[clamp(1.1rem,3vw,1.3rem)] italic text-warm-white">
                 Glow Getter Membership
               </h2>
-              <p className="text-[0.85rem] text-white/[0.65]">
+              <p className="text-[0.85rem] text-warm-white/[0.65]">
                 10% off injectables · 15% off all other services · Credits roll
                 over every month
               </p>
@@ -219,7 +219,7 @@ const ServicesPage = () => {
               <p className="font-display text-[2.2rem] leading-none text-teak">
                 $99
               </p>
-              <p className="mt-1 text-[0.72rem] uppercase tracking-[0.06em] text-white/40">
+              <p className="mt-1 text-[0.72rem] uppercase tracking-[0.06em] text-warm-white/40">
                 per month
               </p>
             </div>

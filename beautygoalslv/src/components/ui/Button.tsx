@@ -6,12 +6,12 @@ type ButtonVariant = "gold" | "outline" | "outline-white" | "black";
 type ButtonSize = "default" | "sm";
 
 const variantStyles: Record<ButtonVariant, string> = {
-  gold: "border border-transparent bg-teak text-black hover:bg-teak-light",
+  gold: "border border-transparent bg-teak text-ink hover:bg-teak-light",
   outline:
-    "border border-teak bg-transparent text-teak hover:bg-teak hover:text-black",
+    "border border-teak bg-transparent text-teak hover:bg-teak hover:text-ink",
   "outline-white":
-    "border border-white/40 bg-transparent text-white hover:bg-white/10",
-  black: "border border-transparent bg-black text-white hover:bg-[#222222]",
+    "border border-warm-white/40 bg-transparent text-warm-white hover:bg-warm-white/10",
+  black: "border border-transparent bg-ink text-warm-white hover:bg-ink-hover",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

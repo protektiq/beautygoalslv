@@ -21,13 +21,13 @@ type Promotion = {
 const PROMOTIONS: readonly Promotion[] = [
   {
     id: "xerf-intro",
-    tag: "New treatment — intro pricing",
+    tag: "New treatment: intro pricing",
     name: "XERF Skin Tightening",
-    discount: "Special introductory rate — limited appointments",
+    discount: "Special introductory rate, limited appointments",
     description:
-      "Be among the first to experience XERF — our newest dual-frequency radiofrequency treatment. No needles, no downtime.",
+      "Be among the first to experience XERF, our newest dual-frequency radiofrequency treatment. No needles, no downtime.",
     ctaLabel: "Claim this offer",
-    note: "Limited spots available — contact us for pricing",
+    note: "Limited spots available, contact us for pricing",
   },
   {
     id: "new-client-special",
@@ -63,14 +63,14 @@ const PromoCard = ({
 }: PromoCardProps) => {
   return (
     <article className="overflow-hidden rounded-[4px] border border-teak/[0.12] bg-white">
-      <div className="border-b-2 border-teak bg-black p-7">
+      <div className="border-b-2 border-teak bg-ink p-7">
         <span className="mb-2.5 block text-[0.68rem] font-bold uppercase tracking-[0.1em] text-teak">
           {tag}
         </span>
-        <h3 className="mb-1.5 font-display text-[1.3rem] italic text-white">
+        <h3 className="mb-1.5 font-display text-[1.3rem] italic text-warm-white">
           {name}
         </h3>
-        <p className="text-[0.85rem] text-white/[0.65]">{discount}</p>
+        <p className="text-[0.85rem] text-warm-white/[0.65]">{discount}</p>
       </div>
 
       <div className="p-6">
@@ -112,12 +112,12 @@ const PromotionsPage = () => {
             ))}
           </ul>
 
-          <div className="rounded-[4px] border border-teak/15 bg-black px-4 py-10 text-center md:px-6 md:py-12">
-            <h2 className="mb-3 font-display text-[clamp(1.25rem,3.5vw,1.5rem)] italic text-white">
+          <div className="rounded-[4px] border border-teak/15 bg-ink px-4 py-10 text-center md:px-6 md:py-12">
+            <h2 className="mb-3 font-display text-[clamp(1.25rem,3.5vw,1.5rem)] italic text-warm-white">
               Year-round savings with a membership
             </h2>
-            <p className="mb-6 text-white/45">
-              Members save 10-15% on every visit, every month — no waiting for
+            <p className="mb-6 text-warm-white/45">
+              Members save 10-15% on every visit, every month, no waiting for
               a promotion.
             </p>
             <Button variant="gold" href="/membership">

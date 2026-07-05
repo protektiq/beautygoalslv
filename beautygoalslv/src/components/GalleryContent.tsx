@@ -86,21 +86,21 @@ const filterButtonBaseClassName =
   "cursor-pointer rounded-[2px] border border-teak/25 bg-white px-5 py-[9px] font-body text-[0.75rem] font-semibold uppercase tracking-[0.07em] text-muted transition-all duration-200";
 
 const filterButtonActiveClassName =
-  "border-teak bg-teak text-black hover:border-teak hover:bg-teak hover:text-black";
+  "border-teak bg-teak text-ink hover:border-teak hover:bg-teak hover:text-ink";
 
 type GalleryCardProps = Pick<GalleryItem, "treatment" | "meta">;
 
 const GalleryCard = ({ treatment, meta }: GalleryCardProps) => {
   return (
-    <article className="overflow-hidden rounded-[4px] border border-teak/10 bg-black transition-[border-color] duration-200 hover:border-teak">
+    <article className="overflow-hidden rounded-[4px] border border-teak/10 bg-ink transition-[border-color] duration-200 hover:border-teak">
       <div className="flex">
         {/* TODO: Replace with <Image> from next/image when real photos are available */}
         <div
           className="flex min-h-[160px] flex-1 flex-col items-center justify-center bg-gradient-to-br from-[#111] to-[#1a1508] px-2.5 py-5"
           role="img"
-          aria-label={`${treatment} — before treatment`}
+          aria-label={`${treatment}, before treatment`}
         >
-          <span className="mb-1.5 text-[0.62rem] uppercase tracking-[0.12em] text-white/30">
+          <span className="mb-1.5 text-[0.62rem] uppercase tracking-[0.12em] text-warm-white/30">
             Before
           </span>
         </div>
@@ -108,9 +108,9 @@ const GalleryCard = ({ treatment, meta }: GalleryCardProps) => {
         <div
           className="flex min-h-[160px] flex-1 flex-col items-center justify-center border-l border-teak/15 bg-gradient-to-br from-[#0d1a0d] to-[#111] px-2.5 py-5"
           role="img"
-          aria-label={`${treatment} — after treatment`}
+          aria-label={`${treatment}, after treatment`}
         >
-          <span className="mb-1.5 text-[0.62rem] uppercase tracking-[0.12em] text-white/30">
+          <span className="mb-1.5 text-[0.62rem] uppercase tracking-[0.12em] text-warm-white/30">
             After
           </span>
         </div>
@@ -158,7 +158,7 @@ const GalleryContent = () => {
                   filterButtonBaseClassName,
                   isActive && filterButtonActiveClassName,
                   !isActive &&
-                    "hover:border-teak hover:bg-teak hover:text-black",
+                    "hover:border-teak hover:bg-teak hover:text-ink",
                 )}
                 onClick={() => handleFilterClick(filter)}
               >

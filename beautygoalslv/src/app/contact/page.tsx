@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Book a Consultation | Beauty Goals LV Las Vegas",
   description:
-    "Book your complimentary consultation at Beauty Goals LV, Las Vegas. Call (702) 625-3838 or send a message — we respond within 24 hours.",
+    "Book your complimentary consultation at Beauty Goals LV, Las Vegas. Call (702) 625-3838 or send a message. We respond within 24 hours.",
 };
 
 const formInputClassName =
@@ -33,7 +33,7 @@ const TREATMENT_OPTIONS = [
   "Emsculpt Neo / Emsella",
   "Thread Lift",
   "Membership inquiry",
-  "Not sure — need a consultation",
+  "Not sure, need a consultation",
 ] as const;
 
 const BUSINESS_HOURS = [
@@ -111,7 +111,7 @@ const ContactPage = () => {
             <ContactDetailRow icon="📸" label="Instagram">
               <p>
                 <a
-                  href="https://instagram.com/beautygoalslv"
+                  href="https://www.instagram.com/beautygoalslv"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-teak"
@@ -164,7 +164,7 @@ const ContactPage = () => {
               role="img"
               aria-label="Map placeholder for 8961 W. Sahara Ave, Las Vegas"
             >
-              📍 Map — 8961 W. Sahara Ave, Las Vegas
+              📍 Map: 8961 W. Sahara Ave, Las Vegas
             </div>
           </div>
 
@@ -273,7 +273,7 @@ const ContactPage = () => {
                   (702) 625-3838
                 </a>
                 <br />
-                Or text — we answer both.
+                Or text. We answer both.
               </div>
             </form>
           </div>

@@ -163,7 +163,7 @@ Send
 
 CEO of Beauty Goals LV
 
-As a highly skilled and experienced medical aesthetics practitioner, Michelle has dedicated her career to helping clients achieve their aesthetic goals through cutting-edge techniques and personalized treatment plans. With over 13 years of experience in the medical field and 10 years in the cosmetic/aesthetics industry, she brings a unique combination of technical expertise and artistic sensibility to every procedure.
+As a highly skilled and experienced medical aesthetics practitioner, Michelle has dedicated her career to helping clients achieve their aesthetic goals through cutting-edge techniques and personalized treatment plans. With over 15 years of experience in the medical field and 13 years in the cosmetic/aesthetics industry, she brings a unique combination of technical expertise and artistic sensibility to every procedure.
 
 Michelle specializes in Facial Balancing, Full Face Rejuvenation and natural results! She is a master injector of Botulinum Toxin, Dermal Filler and PDO threads as well as an expert in cosmetic lasers. She is committed to staying up-to-date with the latest advances in the field and regularly attends industry conferences and trainings such as Regenerative Aesthetics, Advanced Anti-aging Procedures, Medical Grade Skincare and more to ensure that she is offering the most effective treatments to her clients.
 
@@ -173,9 +173,9 @@ Whether you’re looking to refresh your appearance with a non-surgical treatmen
 
 ![Jennifer scaled](<Base64-Image-Removed>)
 
-## Jennifer Guizar
+## Mary Uosef
 
-Jennifer is dedicated to helping clients achieve their beauty goals. With a passion for skincare and a commitment to learning and expanding her skills, she offers a wide range of treatments, including Customized Facials, HydraFacials, HydraFacial Deluxe, Microneedling RF, Dermaplaning, Erbium Fractionated, PRX Peel, Laser hair removal services, Chemical Peels, Sofwave, and many other treatments. Her top priority is helping her clients feel confident in their own skin. She is always happy to create a customized treatment plan for each client’s unique needs and preferences.
+Mary is an Advanced Aesthetician with eight years of experience helping clients achieve healthy, confident skin through personalized, results-driven care. Inspired by the powerful connection between skin health, confidence, and overall well-being, she is passionate about helping clients look and feel their best. Combining advanced clinical knowledge with a compassionate, client-focused approach, Mary creates customized treatment plans and medical-grade skincare regimens tailored to each client’s unique needs and goals. She is dedicated to providing a supportive, welcoming experience while delivering safe, effective, and transformative results. By blending science, personalization, and genuine care, Mary empowers her clients to achieve lasting confidence in their skin.
 
 ![Zayna scaled](<Base64-Image-Removed>)
 
@@ -183,7 +183,17 @@ Jennifer is dedicated to helping clients achieve their beauty goals. With a pass
 
 Advanced Medical Aesthetician
 
-Meet our Medical Aesthetician Zayna! She was born and raised in Oahu, HI but moved to Las Vegas, NV in 2017. She has a very warm and bubbly personality and a passion for helping others. Zayna’s love for aesthetics shows through her meticulous work ethic and her relationship she has with her clients. From HydraFacials, Lasers, Microneedling and more, she creates an experience tailored to every client. Zayna can’t wait to work side by side with you on your journey here at Beauty Goals LV!
+Meet our Medical Aesthetician Zayna! She was born and raised in Oahu, HI but moved to Las Vegas, NV in 2017. She has 5 years of experience as an Aesthetician, a very warm and bubbly personality, and a passion for helping others. Zayna’s love for aesthetics shows through her meticulous work ethic and the relationship she has with her clients. From HydraFacials, Lasers, Microneedling and more, she creates an experience tailored to every client. Zayna can’t wait to work side by side with you on your journey here at Beauty Goals LV!
+
+## Sasha Rueda
+
+Client Care Manager
+
+As Client Care Manager at Beauty Goals LV, Sasha is passionate about creating exceptional client experiences rooted in genuine care, connection, and trust. With a background in the beauty industry and a natural love for people, she ensures every client feels welcomed, supported, and confident throughout their aesthetic journey. Whether coordinating appointments, answering questions, or serving as a trusted point of contact, Sasha strives to make every interaction uplifting, seamless, and personal.
+
+## Jennifer Lunkwitz
+
+Advanced Medical Aesthetician
 
 
 ---

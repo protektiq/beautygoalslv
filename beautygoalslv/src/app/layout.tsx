@@ -22,9 +22,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://beautygoalslv.com"),
   title:
-    "Med Spa Las Vegas | Beauty Goals LV — Botox, Fillers, Facials & More",
+    "Med Spa Las Vegas | Beauty Goals LV: Botox, Fillers, Facials & More",
   description:
-    "Beauty Goals LV is Las Vegas's premier med spa. Expert Botox, fillers, Sofwave, HydraFacial, Emsculpt, and more — led by Michelle Tio-Nguyen, FNP-C.",
+    "Beauty Goals LV is Las Vegas's premier med spa. Expert Botox, fillers, Sofwave, HydraFacial, Emsculpt, and more, led by Michelle Tio-Nguyen, FNP-C.",
   openGraph: {
     siteName: "Beauty Goals LV",
     locale: "en_US",

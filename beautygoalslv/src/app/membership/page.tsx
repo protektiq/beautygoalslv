@@ -173,7 +173,7 @@ const ComparisonCellContent = ({ cell }: { cell: ComparisonCell }) => {
   }
 
   if (cell.type === "dash") {
-    return <span className="text-teak/25">—</span>;
+    return <span className="text-teak/25">&ndash;</span>;
   }
 
   return <span>{cell.value}</span>;
@@ -199,16 +199,16 @@ const TierCard = ({
       )}
     >
       {featured && (
-        <span className="absolute left-1/2 top-[-1px] z-10 -translate-x-1/2 whitespace-nowrap rounded-b-[4px] bg-teak px-3.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-black">
+        <span className="absolute left-1/2 top-[-1px] z-10 -translate-x-1/2 whitespace-nowrap rounded-b-[4px] bg-teak px-3.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.1em] text-ink">
           Most popular
         </span>
       )}
 
-      <div className={cn("bg-black px-6 py-7", featured && "pt-9")}>
-        <h3 className="mb-1.5 font-display text-[1.1rem] italic text-white">
+      <div className={cn("bg-ink px-6 py-7", featured && "pt-9")}>
+        <h3 className="mb-1.5 font-display text-[1.1rem] italic text-warm-white">
           {name}
         </h3>
-        <p className="mt-2 text-[0.82rem] leading-normal text-white/50">
+        <p className="mt-2 text-[0.82rem] leading-normal text-warm-white/50">
           {pitch}
         </p>
         <div className="mt-3 flex items-baseline gap-1">
@@ -216,7 +216,7 @@ const TierCard = ({
           <span className="font-display text-[2.4rem] leading-none text-teak">
             {price}
           </span>
-          <span className="text-[0.75rem] text-white/40">/mo</span>
+          <span className="text-[0.75rem] text-warm-white/40">/mo</span>
         </div>
       </div>
 
@@ -250,7 +250,7 @@ const TierCard = ({
           href="/contact"
           className="w-full text-center"
         >
-          Sign up — call (702) 625-3838
+          Sign up: call (702) 625-3838
         </Button>
       </div>
     </article>
@@ -264,7 +264,7 @@ const MembershipPage = () => {
         breadcrumb="Home"
         breadcrumbHighlight="/ Membership"
         headline="Your skin, on a plan."
-        subtext="Four membership tiers designed to make consistent, expert skincare achievable at every budget. Credits always roll over — never lose what you pay for."
+        subtext="Four membership tiers designed to make consistent, expert skincare achievable at every budget. Credits always roll over. Never lose what you pay for."
       />
 
       <section className="section-padding bg-warm-white">
@@ -284,25 +284,25 @@ const MembershipPage = () => {
             <table className="w-full min-w-[640px] border-collapse text-[0.84rem]">
               <thead>
                 <tr>
-                  <th className="sticky left-0 z-20 border-b-2 border-teak bg-black px-4 py-3.5 text-left text-[0.78rem] font-medium tracking-[0.04em] text-teak">
+                  <th className="sticky left-0 z-20 border-b-2 border-teak bg-ink px-4 py-3.5 text-left text-[0.78rem] font-medium tracking-[0.04em] text-teak">
                     Feature
                   </th>
-                  <th className="border-b-2 border-teak bg-black px-4 py-3.5 text-left text-[0.78rem] font-medium text-white">
+                  <th className="border-b-2 border-teak bg-ink px-4 py-3.5 text-left text-[0.78rem] font-medium text-warm-white">
                     Glow Getter
                     <br />
                     $99
                   </th>
-                  <th className="border-b-2 border-teak bg-black px-4 py-3.5 text-left text-[0.78rem] font-medium text-white">
+                  <th className="border-b-2 border-teak bg-ink px-4 py-3.5 text-left text-[0.78rem] font-medium text-warm-white">
                     Glow Up
                     <br />
                     $175
                   </th>
-                  <th className="border-b-2 border-teak bg-black px-4 py-3.5 text-left text-[0.78rem] font-medium text-white">
+                  <th className="border-b-2 border-teak bg-ink px-4 py-3.5 text-left text-[0.78rem] font-medium text-warm-white">
                     Glow Goals
                     <br />
                     $225
                   </th>
-                  <th className="border-b-2 border-teak bg-black px-4 py-3.5 text-left text-[0.78rem] font-medium text-white">
+                  <th className="border-b-2 border-teak bg-ink px-4 py-3.5 text-left text-[0.78rem] font-medium text-warm-white">
                     Ultimate
                     <br />
                     $499
@@ -362,7 +362,7 @@ const MembershipPage = () => {
 
       <BookingStrip
         headline="Ready to become a member?"
-        subtext="Call us or send a message — we'll find the right plan."
+        subtext="Call us or send a message and we'll find the right plan."
       />
     </>
   );

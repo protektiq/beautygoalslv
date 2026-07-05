@@ -15,7 +15,7 @@ const GalleryPage = () => {
         breadcrumb="Home"
         breadcrumbHighlight="/ Gallery"
         headline="Real clients. Real results."
-        subtext="Every photo is an actual Beauty Goals LV client — no filters, no stock images."
+        subtext="Every photo is an actual Beauty Goals LV client. No filters, no stock images."
       />
 
       <GalleryContent />
