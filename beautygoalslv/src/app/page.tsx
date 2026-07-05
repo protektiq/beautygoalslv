@@ -88,6 +88,14 @@ const SERVICES = [
   },
 ] as const;
 
+const CREDENTIALS = [
+  "Family Nurse Practitioner — Board Certified (FNP-C)",
+  "Master injector — Botulinum Toxin, Dermal Filler, PDO Threads",
+  "Certified in Regenerative Aesthetics & Advanced Anti-Aging",
+  "Expert in cosmetic lasers: Aerolase, Sofwave, Erbium, IPL",
+  "Regular attendee — national aesthetics conferences & trainings",
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -229,6 +237,59 @@ export default function Home() {
           <Button href="/services" variant="outline">
             View all services & pricing
           </Button>
+        </div>
+      </div>
+    </section>
+
+    <section className="bg-white px-6 py-24">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-20">
+        <div
+          className="mx-auto flex aspect-[3/4] max-h-[520px] w-full max-w-md flex-col items-center justify-center rounded border border-teak/20 bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] text-center md:mx-0 md:max-w-none"
+          aria-hidden="true"
+        >
+          <p className="font-display text-[1.1rem] italic text-teak/50">
+            Michelle Tio-Nguyen
+            <br />
+            FNP-C
+          </p>
+        </div>
+
+        <div>
+          <SectionEyebrow>Meet Michelle</SectionEyebrow>
+
+          <h2 className="mb-5 font-display text-body">
+            Master injector. Skin expert. Your partner.
+          </h2>
+
+          <p className="mb-7 text-muted">
+            Michelle Tio-Nguyen, FNP-C brings 13 years of medical expertise and
+            a decade of aesthetic mastery to every appointment. Her approach:
+            listen first, treat second — always preserving what makes you, you.
+          </p>
+
+          <ul className="flex flex-col gap-2.5">
+            {CREDENTIALS.map((credential) => (
+              <li
+                key={credential}
+                className="flex items-start gap-3 text-[0.87rem] text-muted"
+              >
+                <span
+                  className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-teak"
+                  aria-hidden="true"
+                />
+                {credential}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button href="/about" variant="gold">
+              Meet the full team
+            </Button>
+            <Button href="/contact" variant="outline">
+              Book with Michelle
+            </Button>
+          </div>
         </div>
       </div>
     </section>
